@@ -25,11 +25,19 @@ public class ObjectManager : MonoBehaviour
     public void Drop()
     {
         isDrag = false;
-        rigid.simulated = false;
     }
     public void Drag()
     {
         isDrag = true;
         rigid.simulated = true;
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag =="Doll")
+        {
+            Destroy(gameObject);
+        }
+    }
+    
+    
 }
