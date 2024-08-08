@@ -25,19 +25,21 @@ public class ObjectManager : MonoBehaviour
     public void Drop()
     {
         isDrag = false;
+        rigid.simulated = true;
     }
     public void Drag()
     {
         isDrag = true;
         rigid.simulated = true;
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+    public void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag =="Doll")
-        {
-            Destroy(gameObject);
-        }
+        GameObject.Destroy(gameObject);
     }
-    
-    
+    public void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        Debug.Log("Collision detected with: " + gameObject.name);
+    }
+
+
 }
