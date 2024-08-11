@@ -34,12 +34,10 @@ public class ObjectManager : MonoBehaviour
     }
     public void OnCollisionEnter2D(Collision2D collision)
     {
+        Debug.Log("Collision detected with: " + gameObject.name);
         GameObject.Destroy(gameObject);
     }
-    public void OnControllerColliderHit(ControllerColliderHit hit)
-    {
-        Debug.Log("Collision detected with: " + gameObject.name);
-    }
+   
 
 
 }
