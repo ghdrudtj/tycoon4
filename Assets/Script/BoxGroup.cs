@@ -2,15 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BoxManager : MonoBehaviour
+public class BoxGroup : MonoBehaviour
 {
-    [SerializeField]private int accessoryNum = 8;
+
+    public static int accessoryNum = 8;
     [SerializeField] private GameObject accessory = null;
     [SerializeField] private GameObject accSpwan;
     [SerializeField] private float radius = 1.5f;
 
     private List<ObjectManager> accList = new List<ObjectManager>();    
-
     void Start()
     {
         for(int i= 0; i<accessoryNum; i++)
@@ -25,10 +25,9 @@ public class BoxManager : MonoBehaviour
             ObjectManager acc = accGameObj.GetComponent<ObjectManager>();
 
             accList.Add(acc);
+            
         }
-        
     }
-
     void Update()
     {
         

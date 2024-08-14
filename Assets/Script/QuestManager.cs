@@ -23,8 +23,7 @@ public class QuestManager : MonoBehaviour
     public Sprite[] questSprites; // 애니메이션 상태에 따라 변경될 이미지 배열
     private Quest currentQuest; // 현재 활성화된 퀘스트
     private int otherSceneValue; // 다른 씬의 Animator int 값
-
-    void Start()
+    public void NextQuest()
     {
         // 랜덤 퀘스트를 선택하여 설정
         currentQuest = GetRandomQuest();
@@ -41,7 +40,6 @@ public class QuestManager : MonoBehaviour
         // 씬 로드 후 다른 씬의 Animator를 가져오기
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
-
     Quest GetRandomQuest()
     {
         if (quests.Length == 0)
@@ -53,7 +51,6 @@ public class QuestManager : MonoBehaviour
         int randomIndex = Random.Range(0, quests.Length);
         return quests[randomIndex];
     }
-
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         if (scene.name == "OtherSceneName") // 다른 씬의 이름
@@ -66,7 +63,6 @@ public class QuestManager : MonoBehaviour
             }
         }
     }
-
     void CheckQuestStatus()
     {
         if (currentSceneAnimator == null || currentQuest == null)
@@ -88,13 +84,11 @@ public class QuestManager : MonoBehaviour
             Debug.Log("퀘스트를 클리어할 조건이 충족되지 않았습니다.");
         }
     }
-
     void CompleteQuest()
     {
         Debug.Log("퀘스트 클리어!");
         // 퀘스트 클리어에 따른 추가 로직을 여기에 추가합니다.
     }
-
     void UpdateQuestImage(int animatorValue)
     {
         // animatorValue에 따라 이미지를 변경합니다.

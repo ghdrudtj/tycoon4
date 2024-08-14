@@ -6,7 +6,6 @@ public class ObjectManager : MonoBehaviour
 {
     public bool isDrag;
     Rigidbody2D rigid;
-
     
     void Start()
     {
@@ -37,7 +36,4 @@ public class ObjectManager : MonoBehaviour
         Debug.Log("Collision detected with: " + gameObject.name);
         GameObject.Destroy(gameObject);
     }
-   
-
-
 }

@@ -214,7 +214,6 @@ GameObject:
   - component: {fileID: 486415662}
   - component: {fileID: 486415661}
   - component: {fileID: 486415660}
-  - component: {fileID: 486415664}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -309,42 +308,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &486415664
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 486415659}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5feb714cbd1cd5943ba0aaf5aad28b27, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  quests:
-  - title: 1
-    description: "\uC544\uBB34\uAC83\uB3C4 \uC5C6\uC74C"
-    targetValue: 0
-    intParameterName: 0
-  - title: 2
-    description: "\uC704 \uBE68\uAC04\uC0C9 \uCD94\uAC00"
-    targetValue: 0
-    intParameterName: 1
-  - title: 3
-    description: "\uC704 \uC8FC\uD669\uC0C9 \uCD94\uAC00"
-    targetValue: 0
-    intParameterName: 2
-  - title: 4
-    description: "\uC704 \uB178\uB791\uC0C9 \uCD94\uAC00"
-    targetValue: 0
-    intParameterName: 3
-  currentSceneAnimator: {fileID: 1739433585}
-  questImage: {fileID: 1739433582}
-  questSprites:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!1 &499217803
 GameObject:
   m_ObjectHideFlags: 0
