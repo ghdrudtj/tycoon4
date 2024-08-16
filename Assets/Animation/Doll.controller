@@ -1179,7 +1179,10 @@ AnimatorStateTransition:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: 
-  m_Conditions: []
+  m_Conditions:
+  - m_ConditionMode: 6
+    m_ConditionEvent: doll
+    m_EventTreshold: 4
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -6146178356724933330}
   m_Solo: 0
@@ -2255,75 +2258,75 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 320844419164080235}
-    m_Position: {x: 30, y: 170, z: 0}
+    m_Position: {x: 30, y: -100, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -175993756136057155}
-    m_Position: {x: -300, y: 90, z: 0}
+    m_Position: {x: -430, y: 20, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -7546649985554211233}
-    m_Position: {x: -300, y: 270, z: 0}
+    m_Position: {x: -430, y: 340, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 735485752210101662}
-    m_Position: {x: 360, y: 270, z: 0}
+    m_Position: {x: 470, y: 330, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 5587211077744992119}
-    m_Position: {x: -570, y: 250, z: 0}
+    m_Position: {x: -690, y: 250, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -8716407249221334795}
-    m_Position: {x: -420, y: 420, z: 0}
+    m_Position: {x: -610, y: 540, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 8177565155563997642}
-    m_Position: {x: 470, y: 420, z: 0}
+    m_Position: {x: 620, y: 540, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 3833197346081993111}
-    m_Position: {x: -440, y: -60, z: 0}
+    m_Position: {x: -610, y: -190, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 7710394580123452278}
-    m_Position: {x: -640, y: 10, z: 0}
+    m_Position: {x: -850, y: -60, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -2451387940894693935}
-    m_Position: {x: 220, y: 390, z: 0}
+    m_Position: {x: 330, y: 450, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -6146178356724933330}
-    m_Position: {x: 360, y: 90, z: 0}
+    m_Position: {x: 470, y: 20, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -5322473451687709336}
-    m_Position: {x: -570, y: 130, z: 0}
+    m_Position: {x: -690, y: 110, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -3895221257074494840}
-    m_Position: {x: -640, y: 320, z: 0}
+    m_Position: {x: -870, y: 390, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -8163329005657439876}
-    m_Position: {x: -180, y: 370, z: 0}
+    m_Position: {x: -280, y: 450, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 6207667103159708881}
-    m_Position: {x: -170, y: -40, z: 0}
+    m_Position: {x: -280, y: -120, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -4797029159556789379}
-    m_Position: {x: 680, y: 350, z: 0}
+    m_Position: {x: 890, y: 420, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 6233039104997766848}
-    m_Position: {x: 620, y: 270, z: 0}
+    m_Position: {x: 810, y: 260, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 3290495699306775752}
-    m_Position: {x: 630, y: 110, z: 0}
+    m_Position: {x: 810, y: 100, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -9197945785532342017}
-    m_Position: {x: 680, y: 10, z: 0}
+    m_Position: {x: 890, y: -90, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -8049478676664604414}
-    m_Position: {x: 470, y: -60, z: 0}
+    m_Position: {x: 610, y: -190, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 7974452177776803662}
-    m_Position: {x: 240, y: -10, z: 0}
+    m_Position: {x: 320, y: -130, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
   m_StateMachineTransitions: {}
   m_StateMachineBehaviours: []
-  m_AnyStatePosition: {x: 40, y: -170, z: 0}
-  m_EntryPosition: {x: 50, y: -90, z: 0}
-  m_ExitPosition: {x: 780, y: -160, z: 0}
+  m_AnyStatePosition: {x: -180, y: -230, z: 0}
+  m_EntryPosition: {x: 40, y: -250, z: 0}
+  m_ExitPosition: {x: 270, y: -230, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
   m_DefaultState: {fileID: 320844419164080235}
 --- !u!1101 &3133582944627376213

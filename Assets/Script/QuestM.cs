@@ -6,28 +6,29 @@ public class QuestM : MonoBehaviour
 {
     public static QuestM instance;
 
-    public static int QNum;
-    public static int Num;
+    public int QNum;
+    public int Num;
 
-    public static bool isClear;
-    public void Start()
+    public bool isClear;
+    private void Awake()
     {
         instance = this;
-        Num = DollMakerMangaer.Num;
+    }
+    public void Start()
+    {
+        Num = DollMakerManager.instance.Num;
     }
     public void Quest()
     {
-        int QNum = Random.Range(1, 20);
+        QNum = Random.Range(1, 20);
         Debug.Log("QNum = " + QNum);
-        
     }
     public void Clear()
     {
-
         if (QNum == Num)
         {
             Debug.Log("Å¬¸®¾î");
-            int QNum = Random.Range(0, 20);
+            QNum = Random.Range(1, 20);
             Debug.Log("QNum = " + QNum);
             Num = 0;
             isClear = true;
@@ -35,8 +36,10 @@ public class QuestM : MonoBehaviour
         else if (QNum != Num)
         {
             Debug.Log("no");
+            QNum = Random.Range(1, 20);
+            Debug.Log("QNum = " + QNum);
             Num = 0;
-            isClear = true;
+            DollMakerManager.instance.isClear = true;
         }
     }
 }
