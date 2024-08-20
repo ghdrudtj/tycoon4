@@ -36,8 +36,6 @@ public class QuestM : MonoBehaviour
     public Sprite d19;
     public Sprite d20;
 
-    public GameObject clearText;
-    public GameObject overText;
 
     private void Awake()
     {
@@ -46,8 +44,6 @@ public class QuestM : MonoBehaviour
     public void Start()
     {
         Num = DollMakerManager.instance.Num;
-        clearText.SetActive(false);
-        overText.SetActive(false);
     }
     public void Quest()
     {
@@ -139,34 +135,19 @@ public class QuestM : MonoBehaviour
         if (QNum == Num)
         {
             Debug.Log("Å¬¸®¾î");
-            Invoke("clearT", 0.5f);
-            
             QNum = 0;
-            if (QNum == 0)
-            {
-                order.sprite = d0;
-                Invoke("overT", 0.5f);
-            }
-            isClear = true;
-            
+            order.sprite = d0;
         }
         else if (QNum != Num)
         {
             Debug.Log("no");
             QNum = 0;
-            if (QNum == 0)
-            {
-                order.sprite = d0;
-            }
-            DollMakerManager.instance.isClear = true;
+            order.sprite = d0;
         }
+
     }
-    private void clearT()
+    private void Update()
     {
-        clearText.SetActive(true);
-    }
-    private void overT()
-    {
-        overText.SetActive(true);
+        Num = DollMakerManager.instance.Num;
     }
 }

@@ -26,13 +26,11 @@ public class DollMakerManager : MonoBehaviour
     {
         anim= GetComponent<Animator>(); 
         QNum = QuestM.instance.QNum;
-        Num = QuestM.instance.Num;
     }
     public void head3()
     {
         anim.SetInteger("doll", 3);
         anim.SetBool("acc1",true);
-        QuestM.instance.Num = 3;
         Num = 3;
         Debug.Log("Num = " + Num);
         M_Doll1_3.SetActive(true);
@@ -44,7 +42,6 @@ public class DollMakerManager : MonoBehaviour
     {
         anim.SetInteger("doll", 2);
         anim.SetBool("acc1", true);
-        QuestM.instance.Num = 2;
         Num = 2;
         Debug.Log("Num = " + Num);
         M_Doll1_2.SetActive(true);
@@ -56,7 +53,6 @@ public class DollMakerManager : MonoBehaviour
     {
         anim.SetInteger("doll", 1);
         anim.SetBool("acc1", true);
-        QuestM.instance.Num = 1;
         Num = 1;
         Debug.Log("Num = " + Num);
         M_Doll1_1.SetActive(true);
@@ -68,7 +64,6 @@ public class DollMakerManager : MonoBehaviour
     {
         anim.SetInteger("doll", 4);
         anim.SetBool("acc1", true);
-        QuestM.instance.Num = 4;
         Num = 4;
         Debug.Log("Num = " + Num);
         M_Doll1_1.SetActive(false);
@@ -81,7 +76,6 @@ public class DollMakerManager : MonoBehaviour
         if(Num == 1||Num == 6 || Num == 7 || Num == 8)
         {
             anim.SetInteger("doll", 5);
-            QuestM.instance.Num = 5;
             Num = 5;
             Debug.Log("Num = " + Num);
         }
@@ -91,7 +85,6 @@ public class DollMakerManager : MonoBehaviour
         if(Num == 1 || Num == 5 || Num == 8 || Num == 7) 
         {
             anim.SetInteger("doll", 6);
-            QuestM.instance.Num = 6;
             Num = 6;
             Debug.Log("Num = " + Num);
         }
@@ -101,7 +94,6 @@ public class DollMakerManager : MonoBehaviour
         if (Num == 1 || Num == 5 || Num == 8 || Num == 6)
         {
             anim.SetInteger("doll", 7);
-            QuestM.instance.Num = 7;
             Num = 7;
             Debug.Log("Num = " + Num);
         }
@@ -111,7 +103,6 @@ public class DollMakerManager : MonoBehaviour
         if (Num == 1 || Num == 5 || Num == 7 || Num == 6)
         {
             anim.SetInteger("doll", 8);
-            QuestM.instance.Num = 8;
             Num = 8;
             Debug.Log("Num = " + Num);
         }
@@ -121,7 +112,6 @@ public class DollMakerManager : MonoBehaviour
         if (Num == 2 || Num == 10 || Num == 11 || Num == 12)
         {
             anim.SetInteger("doll", 9);
-            QuestM.instance.Num = 9;
             Num = 9;
             Debug.Log("Num = " + Num);
         }
@@ -132,7 +122,6 @@ public class DollMakerManager : MonoBehaviour
         if (Num == 2|| Num == 10 || Num == 12 || Num == 9)
         {
             anim.SetInteger("doll", 10);
-            QuestM.instance.Num = 10;
             Num = 10;
             Debug.Log("Num = " + Num);
         }
@@ -143,7 +132,6 @@ public class DollMakerManager : MonoBehaviour
         if (Num == 2 || Num == 9 || Num == 10 || Num == 12)
         {
             anim.SetInteger("doll", 11);
-            QuestM.instance.Num = 11;
             Num = 11;
             Debug.Log("Num = " + Num);
         }
@@ -153,7 +141,6 @@ public class DollMakerManager : MonoBehaviour
         if (Num == 2 || Num == 9 || Num == 10 || Num == 11)
         {
             anim.SetInteger("doll", 12);
-            QuestM.instance.Num = 12;
             Num = 12;
             Debug.Log("Num = " + Num);
         }
@@ -163,7 +150,6 @@ public class DollMakerManager : MonoBehaviour
         if (Num == 3 || Num == 14 || Num == 15 || Num == 16)
         {
             anim.SetInteger("doll", 13);
-            QuestM.instance.Num = 13;
             Num = 13;
             Debug.Log("Num = " + Num);
         }
@@ -173,7 +159,6 @@ public class DollMakerManager : MonoBehaviour
         if (Num == 3 || Num == 13 || Num == 15 || Num == 16)
         {
             anim.SetInteger("doll", 14);
-            QuestM.instance.Num = 14;
             Num = 14;
             Debug.Log("Num = " + Num);
         }
@@ -183,7 +168,6 @@ public class DollMakerManager : MonoBehaviour
         if (Num == 3 || Num == 13 || Num == 14 || Num == 16)
         {
             anim.SetInteger("doll", 15);
-            QuestM.instance.Num = 15;
             Num = 15;
             Debug.Log("Num = " + Num);
         }
@@ -193,7 +177,6 @@ public class DollMakerManager : MonoBehaviour
         if (Num == 3 || Num == 13 || Num == 14 || Num == 15)
         {
             anim.SetInteger("doll", 16);
-            QuestM.instance.Num = 16;
             Num = 16;
             Debug.Log("Num = " + Num);
         }
@@ -203,7 +186,6 @@ public class DollMakerManager : MonoBehaviour
         if (Num == 4 || Num == 18 || Num == 19 || Num == 20)
         {
             anim.SetInteger("doll", 17);
-            QuestM.instance.Num = 17;
             Num = 17;
             Debug.Log("Num = " + Num);
         }
@@ -213,7 +195,6 @@ public class DollMakerManager : MonoBehaviour
         if (Num == 4 || Num == 17 || Num == 19 || Num == 20)
         {
             anim.SetInteger("doll", 18);
-            QuestM.instance.Num = 18;
             Num = 18;
             Debug.Log("Num = " + Num);
         }
@@ -223,7 +204,6 @@ public class DollMakerManager : MonoBehaviour
         if (Num == 4 || Num == 17 || Num == 18 || Num == 20)
         {
             anim.SetInteger("doll", 19);
-            QuestM.instance.Num = 19;
             Num = 19;
             Debug.Log("Num = " + Num);
         }
@@ -233,7 +213,6 @@ public class DollMakerManager : MonoBehaviour
         if (Num == 4 || Num == 17 || Num == 19 || Num == 18)
         {
             anim.SetInteger("doll", 20);
-            QuestM.instance.Num = 20;
             Num = 20;
             Debug.Log("Num = " + Num);
         }
@@ -243,19 +222,13 @@ public class DollMakerManager : MonoBehaviour
         if(Num != 0)
         {
             anim.SetInteger("doll", 0);
-            QuestM.instance.Num = 0;
             Num = 0;
             Debug.Log("Num = " + Num);
         }
     }
     private void Update()
     {
-        if (isClear)
-        {
-            QuestM.instance.Num = 0;
-            Num = 0;
-            anim.SetInteger("doll", 0);
-            QuestM.instance.isClear = false;
-        }
+       
+        QNum = QuestM.instance.QNum;
     }
 }
