@@ -137,12 +137,14 @@ public class QuestM : MonoBehaviour
             Debug.Log("Å¬¸®¾î");
             QNum = 0;
             order.sprite = d0;
+            //Coin.instance.coin += 10;
         }
         else if (QNum != Num)
         {
             Debug.Log("no");
             QNum = 0;
             order.sprite = d0;
+            //Coin.instance.coin -= 10;
         }
 
     }
