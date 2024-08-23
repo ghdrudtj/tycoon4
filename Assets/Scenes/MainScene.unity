@@ -4458,6 +4458,53 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1388478430}
   m_CullTransparentMesh: 1
+--- !u!1 &1471539566
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1471539568}
+  - component: {fileID: 1471539567}
+  m_Layer: 0
+  m_Name: GameObject (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1471539567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1471539566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af3ccfb5d58a7f34cbc29bb1be5a9409, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coin: {fileID: 1631632122}
+  dollMakerManager: {fileID: 1994504977}
+  QuestM: {fileID: 1130899507}
+--- !u!4 &1471539568
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1471539566}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 219.71033, y: 1026.667, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1489908865
 GameObject:
   m_ObjectHideFlags: 0
@@ -4816,6 +4863,7 @@ GameObject:
   - component: {fileID: 1631632119}
   - component: {fileID: 1631632121}
   - component: {fileID: 1631632120}
+  - component: {fileID: 1631632122}
   m_Layer: 5
   m_Name: Text (Legacy)
   m_TagString: Untagged
@@ -4884,6 +4932,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1631632118}
   m_CullTransparentMesh: 1
+--- !u!114 &1631632122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1631632118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9390865f1a0719468d23ef7b609bac8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cointext: {fileID: 1631632120}
+  coin: 100
 --- !u!1 &1677118622
 GameObject:
   m_ObjectHideFlags: 0
@@ -5812,3 +5874,4 @@ SceneRoots:
   - {fileID: 427711714}
   - {fileID: 448983988}
   - {fileID: 456219422}
+  - {fileID: 1471539568}

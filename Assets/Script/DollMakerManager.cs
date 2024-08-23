@@ -17,7 +17,7 @@ public class DollMakerManager : MonoBehaviour
     public GameObject M_Doll1_4;
 
     public bool isClear;
-    private void Awake()
+    public void lnit()
     {
         instance = this;
     }
@@ -37,6 +37,7 @@ public class DollMakerManager : MonoBehaviour
         M_Doll1_2.SetActive(false);
         M_Doll1_1.SetActive(false);
         M_Doll1_4.SetActive(false);
+        Coin.instance.coin -= 1;
     }
     public void head2()
     {
@@ -48,6 +49,7 @@ public class DollMakerManager : MonoBehaviour
         M_Doll1_3.SetActive(false);
         M_Doll1_1.SetActive(false);
         M_Doll1_4.SetActive(false);
+            Coin.instance.coin -= 1;
     }
     public void head1()
     {
@@ -59,6 +61,7 @@ public class DollMakerManager : MonoBehaviour
         M_Doll1_2.SetActive(false);
         M_Doll1_3.SetActive(false);
         M_Doll1_4.SetActive(false);
+        Coin.instance.coin -= 1;
     }
     public void head4()
     {
@@ -70,6 +73,7 @@ public class DollMakerManager : MonoBehaviour
         M_Doll1_2.SetActive(false);
         M_Doll1_3.SetActive(false);
         M_Doll1_4.SetActive(true);
+        Coin.instance.coin -= 1;
     }
     public void Doll1_1()
     {
@@ -78,6 +82,7 @@ public class DollMakerManager : MonoBehaviour
             anim.SetInteger("doll", 5);
             Num = 5;
             Debug.Log("Num = " + Num);
+            Coin.instance.coin -= 1;
         }
     }
     public void Doll1_2()
@@ -87,6 +92,7 @@ public class DollMakerManager : MonoBehaviour
             anim.SetInteger("doll", 6);
             Num = 6;
             Debug.Log("Num = " + Num);
+            Coin.instance.coin -= 1;
         }
     }
     public void Doll1_3()
@@ -96,6 +102,7 @@ public class DollMakerManager : MonoBehaviour
             anim.SetInteger("doll", 7);
             Num = 7;
             Debug.Log("Num = " + Num);
+            Coin.instance.coin -= 1;
         }
     }
     public void Doll1_4()
@@ -105,6 +112,7 @@ public class DollMakerManager : MonoBehaviour
             anim.SetInteger("doll", 8);
             Num = 8;
             Debug.Log("Num = " + Num);
+                Coin.instance.coin -= 1;
         }
     }
     public void Doll2_1()
@@ -114,8 +122,8 @@ public class DollMakerManager : MonoBehaviour
             anim.SetInteger("doll", 9);
             Num = 9;
             Debug.Log("Num = " + Num);
+            Coin.instance.coin -= 1;
         }
-        
     }
     public void Doll2_2()
     {
@@ -124,8 +132,8 @@ public class DollMakerManager : MonoBehaviour
             anim.SetInteger("doll", 10);
             Num = 10;
             Debug.Log("Num = " + Num);
+            Coin.instance.coin -= 1;
         }
-        
     }
     public void Doll2_3()
     {
@@ -134,6 +142,7 @@ public class DollMakerManager : MonoBehaviour
             anim.SetInteger("doll", 11);
             Num = 11;
             Debug.Log("Num = " + Num);
+            Coin.instance.coin -= 1;
         }
     }
     public void Doll2_4()
@@ -143,6 +152,7 @@ public class DollMakerManager : MonoBehaviour
             anim.SetInteger("doll", 12);
             Num = 12;
             Debug.Log("Num = " + Num);
+            Coin.instance.coin -= 1;
         }
     }
     public void Doll3_1()
@@ -152,6 +162,7 @@ public class DollMakerManager : MonoBehaviour
             anim.SetInteger("doll", 13);
             Num = 13;
             Debug.Log("Num = " + Num);
+            Coin.instance.coin -= 1;
         }
     }
     public void Doll3_2()
@@ -161,6 +172,7 @@ public class DollMakerManager : MonoBehaviour
             anim.SetInteger("doll", 14);
             Num = 14;
             Debug.Log("Num = " + Num);
+            Coin.instance.coin -= 1;
         }
     }
     public void Doll3_3()
@@ -170,6 +182,7 @@ public class DollMakerManager : MonoBehaviour
             anim.SetInteger("doll", 15);
             Num = 15;
             Debug.Log("Num = " + Num);
+            Coin.instance.coin -= 1;
         }
     }
     public void Doll3_4()
@@ -179,6 +192,7 @@ public class DollMakerManager : MonoBehaviour
             anim.SetInteger("doll", 16);
             Num = 16;
             Debug.Log("Num = " + Num);
+            Coin.instance.coin -= 1;
         }
     }
     public void Doll4_1()
@@ -188,6 +202,7 @@ public class DollMakerManager : MonoBehaviour
             anim.SetInteger("doll", 17);
             Num = 17;
             Debug.Log("Num = " + Num);
+            Coin.instance.coin -= 1;
         }
     }
     public void Doll4_2()
@@ -197,6 +212,7 @@ public class DollMakerManager : MonoBehaviour
             anim.SetInteger("doll", 18);
             Num = 18;
             Debug.Log("Num = " + Num);
+            Coin.instance.coin -= 1;
         }
     }
     public void Doll4_3()
@@ -206,6 +222,7 @@ public class DollMakerManager : MonoBehaviour
             anim.SetInteger("doll", 19);
             Num = 19;
             Debug.Log("Num = " + Num);
+            Coin.instance.coin -= 1;
         }
     }
     public void Doll4_4()
@@ -215,6 +232,7 @@ public class DollMakerManager : MonoBehaviour
             anim.SetInteger("doll", 20);
             Num = 20;
             Debug.Log("Num = " + Num);
+            Coin.instance.coin -= 1;
         }
     }
     public void Doll0()
@@ -224,11 +242,11 @@ public class DollMakerManager : MonoBehaviour
             anim.SetInteger("doll", 0);
             Num = 0;
             Debug.Log("Num = " + Num);
+            Coin.instance.coin -= 1;
         }
     }
     private void Update()
     {
-       
         QNum = QuestM.instance.QNum;
     }
 }

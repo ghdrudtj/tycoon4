@@ -37,7 +37,7 @@ public class QuestM : MonoBehaviour
     public Sprite d20;
 
 
-    private void Awake()
+    public void lnit()
     {
         instance = this;
     }
@@ -137,14 +137,14 @@ public class QuestM : MonoBehaviour
             Debug.Log("Å¬¸®¾î");
             QNum = 0;
             order.sprite = d0;
-            //Coin.instance.coin += 10;
+            Coin.instance.coin += 30;
         }
         else if (QNum != Num)
         {
             Debug.Log("no");
             QNum = 0;
             order.sprite = d0;
-            //Coin.instance.coin -= 10;
+            Coin.instance.coin -= 30;
         }
 
     }

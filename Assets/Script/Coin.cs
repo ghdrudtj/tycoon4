@@ -14,7 +14,7 @@ public class Coin : MonoBehaviour
     {
         cointext = GetComponent<Text>();
     }
-    private void Awake()
+    public void lnit()
     {
         instance = this;
     }
@@ -22,4 +22,5 @@ public class Coin : MonoBehaviour
     {
         cointext.text = coin.ToString();
     }
+  
 }
