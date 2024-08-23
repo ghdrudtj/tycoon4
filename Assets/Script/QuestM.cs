@@ -36,7 +36,7 @@ public class QuestM : MonoBehaviour
     public Sprite d19;
     public Sprite d20;
 
-
+    public Animator anim;
     public void lnit()
     {
         instance = this;
@@ -47,6 +47,7 @@ public class QuestM : MonoBehaviour
     }
     public void Quest()
     {
+        //anim.SetTrigger("coin");
         QNum = Random.Range(1, 21);
         Debug.Log("QNum = " + QNum);
         if (QNum == 1)
@@ -138,6 +139,7 @@ public class QuestM : MonoBehaviour
             QNum = 0;
             order.sprite = d0;
             Coin.instance.coin += 30;
+           // anim.SetTrigger("coin+");
         }
         else if (QNum != Num)
         {
@@ -145,6 +147,7 @@ public class QuestM : MonoBehaviour
             QNum = 0;
             order.sprite = d0;
             Coin.instance.coin -= 30;
+            //anim.SetTrigger("coin-");
         }
 
     }

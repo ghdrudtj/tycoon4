@@ -3628,6 +3628,7 @@ MonoBehaviour:
   d18: {fileID: 21300000, guid: 9aa185bd898614242a1646d42ac1679e, type: 3}
   d19: {fileID: 21300000, guid: 65aae129f4147624f8c53c00091452c6, type: 3}
   d20: {fileID: 21300000, guid: 5acdfdca8d6b9ee408088b6ce624c6e1, type: 3}
+  anim: {fileID: 1383987767}
 --- !u!4 &1130899508
 Transform:
   m_ObjectHideFlags: 0
@@ -4261,6 +4262,7 @@ GameObject:
   - component: {fileID: 1383987764}
   - component: {fileID: 1383987766}
   - component: {fileID: 1383987765}
+  - component: {fileID: 1383987767}
   m_Layer: 5
   m_Name: Coin
   m_TagString: Untagged
@@ -4326,6 +4328,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1383987763}
   m_CullTransparentMesh: 1
+--- !u!95 &1383987767
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1383987763}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ff3558aaeac31144ea2ba2c6de7ea5d3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1388478430
 GameObject:
   m_ObjectHideFlags: 0
