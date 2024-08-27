@@ -36,14 +36,12 @@ public class QuestM : MonoBehaviour
     public Sprite d19;
     public Sprite d20;
 
-    public Animator anim;
     public void lnit()
     {
         instance = this;
     }
     public void Start()
     {
-        Num = DollMakerManager.instance.Num;
     }
     public void Quest()
     {
