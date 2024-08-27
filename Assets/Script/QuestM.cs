@@ -136,7 +136,11 @@ public class QuestM : MonoBehaviour
             Debug.Log("Å¬¸®¾î");
             QNum = 0;
             order.sprite = d0;
-            Coin.instance.coin += 30;
+            if(Num >= 4)
+            {
+                Coin.instance.coin += 15;
+            }
+            Coin.instance.coin += 15;
            // anim.SetTrigger("coin+");
         }
         else if (QNum != Num)
