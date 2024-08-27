@@ -36,7 +36,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: 0.68, y: 1.2, z: 0}
+        value: {x: -0.006, y: 0.196, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -52,7 +52,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0.016666668
-        value: {x: 0.02, y: -0.73, z: 0}
+        value: {x: 0.02, y: -0.455, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -164,7 +164,7 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: 1787981849, guid: 3abb269de6d44a247b605514592edc9b, type: 3}
+      value: {fileID: 873417023, guid: d34eb5c4ec9d4cb44b14c68b393e9fc9, type: 3}
     attribute: m_Sprite
     path: H_test
     classID: 212
@@ -173,7 +173,7 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0.016666668
-      value: {fileID: 656044376, guid: 3abb269de6d44a247b605514592edc9b, type: 3}
+      value: {fileID: 904968611, guid: d34eb5c4ec9d4cb44b14c68b393e9fc9, type: 3}
     attribute: m_Sprite
     path: B_test
     classID: 212
@@ -277,8 +277,8 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: 1787981849, guid: 3abb269de6d44a247b605514592edc9b, type: 3}
-    - {fileID: 656044376, guid: 3abb269de6d44a247b605514592edc9b, type: 3}
+    - {fileID: 873417023, guid: d34eb5c4ec9d4cb44b14c68b393e9fc9, type: 3}
+    - {fileID: 904968611, guid: d34eb5c4ec9d4cb44b14c68b393e9fc9, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
@@ -306,7 +306,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.68
+        value: -0.006
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -327,7 +327,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 1.2
+        value: 0.196
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -474,7 +474,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0.016666668
-        value: -0.73
+        value: -0.455
         inSlope: 0
         outSlope: 0
         tangentMode: 136
