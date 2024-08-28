@@ -35,6 +35,7 @@ public class QuestM : MonoBehaviour
     public Sprite d18;
     public Sprite d19;
     public Sprite d20;
+    private float maxTimer;
 
     public void lnit()
     {
@@ -45,7 +46,7 @@ public class QuestM : MonoBehaviour
     }
     public void Quest()
     {
-        //anim.SetTrigger("coin");
+        StartCoroutine(TimerCoroutine());
         QNum = Random.Range(1, 21);
         Debug.Log("QNum = " + QNum);
         if (QNum == 1)
@@ -129,6 +130,7 @@ public class QuestM : MonoBehaviour
             order.sprite = d20;
         }
     }
+
     public void Clear()
     {
         if (QNum == Num)
@@ -156,5 +158,16 @@ public class QuestM : MonoBehaviour
     private void Update()
     {
         Num = DollMakerManager.instance.Num;
+    }
+    IEnumerator TimerCoroutine()
+    {
+        float currentTimer = 0;
+        while (currentTimer < maxTimer)
+        {
+            currentTimer += Time.deltaTime;
+            Timer.instance.OnTimerChange((int)currentTimer,maxTimer);
+            yield return new WaitForSeconds(10f);
+        }
+        
     }
 }
