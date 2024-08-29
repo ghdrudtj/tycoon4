@@ -9,17 +9,17 @@ public class Timer : MonoBehaviour
 
     [SerializeField] private Image timerImg;
     //[SerializeField] private Text timerTxt;
-    public void lnit()
+   
+    private void Awake()
     {
         instance = this;
     }
-    
-    public void OnTimerChange(int currentTimer, float maxTimer)
+    public void OnTimerChange(float currentTimer, float maxTimer)
     {
         //timerTxt.text = $"{currentTimer:N1}/{maxTimer:N1}";
         timerImg.fillAmount = currentTimer / maxTimer;
-        Debug.Log("Timer = " + currentTimer / maxTimer);
     }
+    
     void Update()
     {
         

@@ -35,7 +35,9 @@ public class QuestM : MonoBehaviour
     public Sprite d18;
     public Sprite d19;
     public Sprite d20;
-    private float maxTimer;
+
+    [SerializeField]private float maxTimer = 10;
+    Coroutine timerCoroutine;
 
     public void lnit()
     {
@@ -46,7 +48,7 @@ public class QuestM : MonoBehaviour
     }
     public void Quest()
     {
-        StartCoroutine(TimerCoroutine());
+        timerCoroutine = StartCoroutine(TimerCoroutine());
         QNum = Random.Range(1, 21);
         Debug.Log("QNum = " + QNum);
         if (QNum == 1)
@@ -133,6 +135,9 @@ public class QuestM : MonoBehaviour
 
     public void Clear()
     {
+        StopCoroutine(timerCoroutine);
+        float currentTimer = 0f;
+
         if (QNum == Num)
         {
             Debug.Log("클리어");
@@ -161,13 +166,18 @@ public class QuestM : MonoBehaviour
     }
     IEnumerator TimerCoroutine()
     {
-        float currentTimer = 0;
-        while (currentTimer < maxTimer)
+        float currentTimer = 0f;
+
+        while(currentTimer < maxTimer)
         {
             currentTimer += Time.deltaTime;
-            Timer.instance.OnTimerChange((int)currentTimer,maxTimer);
-            yield return new WaitForSeconds(10f);
+            Timer.instance.OnTimerChange(currentTimer, maxTimer);
+            yield return null;
         }
-        
+      
+        Debug.Log("타이머 끝");
+        QNum = 0;
+        order.sprite = d0;
+        Coin.instance.coin -= 30;
     }
 }
