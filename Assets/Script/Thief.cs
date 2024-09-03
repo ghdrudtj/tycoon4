@@ -9,6 +9,7 @@ public class Thief : MonoBehaviour
     public int thiefMaxNum = 10; // µµµœ¿« √÷¥Î ≈¨∏Ø ºˆ
     public float spawnInterval = 5;  // µµµœ º“»Ø ∞£∞›
     public float thiefActiveDuration = 5f; // µµµœ »∞º∫»≠ Ω√∞£
+    public int coin_m;
 
     private int currentThiefClicks;
     private float spawnTimer;
@@ -77,8 +78,8 @@ public class Thief : MonoBehaviour
         if (currentThiefClicks <= thiefMaxNum)
         {
             Debug.Log("µµµœ Ω«∆–!");
-            Coin.instance.coin -= Coin.instance.coin / 10;
-            Debug.Log("coin = " + Coin.instance.coin / 10);
+            Coin.instance.coin -= Coin.instance.coin / coin_m;
+            Debug.Log("»…√ƒ∞£µ∑ = " + Coin.instance.coin / coin_m);
             Thiefover = true;
         }
         thiefObj.SetActive(false);
