@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GameUI : MonoBehaviour
 {
+    public static GameUI instance;  
     public GameObject MenuUI;
     bool GameActive =false;
 

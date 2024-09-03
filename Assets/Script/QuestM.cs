@@ -145,9 +145,9 @@ public class QuestM : MonoBehaviour
             order.sprite = d0;
             if(Num > 4)
             {
-                Coin.instance.coin += 20;
+                Coin.instance.coin += 10;
             }
-            Coin.instance.coin += 10;
+            Coin.instance.coin += 30;
         }
         else if (QNum != Num)
         {
