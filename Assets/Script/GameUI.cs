@@ -23,11 +23,13 @@ public class GameUI : MonoBehaviour
             {
                 Time.timeScale = 1.0f;
                 GameActive = false;
+                Debug.Log("게임 다시 실행");
             }
             else
             {
                 Time.timeScale = 0;
                 GameActive = true;
+                Debug.Log("게임 일시정지");
             }
         }
     }

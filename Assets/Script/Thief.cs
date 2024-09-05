@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Thief : MonoBehaviour
 {
-    public static Disturbance disturbance;
+    public static Thief thief;
     public GameObject thiefObj;
     public int thiefMaxNum = 10; // µµµÏÀÇ ÃÖ´ë Å¬¸¯ ¼ö
     public float spawnInterval = 5;  // µµµÏ ¼ÒÈ¯ °£°Ý
@@ -12,7 +12,6 @@ public class Thief : MonoBehaviour
     public int coin_m;
 
     private int currentThiefClicks;
-    private float spawnTimer;
     private bool isThiefActive;
 
     private bool Thiefclear;
@@ -51,8 +50,6 @@ public class Thief : MonoBehaviour
                 EvaluateThief();
             }
             isThiefActive = false;
-            Thiefclear=false;
-            Thiefover=false;
         }
     }
 
@@ -67,8 +64,7 @@ public class Thief : MonoBehaviour
     {
         if (currentThiefClicks >= thiefMaxNum)
         {
-            Debug.Log("µµµÏ ¼º°ø!");
-            Thiefclear = true;
+            Debug.Log("µµµÏ ¹æ¾î ¼º°ø!");
         }
        
         thiefObj.SetActive(false);
@@ -77,10 +73,9 @@ public class Thief : MonoBehaviour
     {
         if (currentThiefClicks <= thiefMaxNum)
         {
-            Debug.Log("µµµÏ ½ÇÆÐ!");
+            Debug.Log("µµµÏ ¹æ¾î ½ÇÆÐ!");
             Coin.instance.coin -= Coin.instance.coin / coin_m;
             Debug.Log("ÈÉÃÄ°£µ· = " + Coin.instance.coin / coin_m);
-            Thiefover = true;
         }
         thiefObj.SetActive(false);
     }
