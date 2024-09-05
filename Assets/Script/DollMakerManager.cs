@@ -30,7 +30,6 @@ public class DollMakerManager : MonoBehaviour
     public void head3()
     {
         anim.SetInteger("doll", 3);
-        anim.SetBool("acc1",true);
         Num = 3;
         Debug.Log("Num = " + Num);
         M_Doll1_3.SetActive(true);
@@ -42,7 +41,6 @@ public class DollMakerManager : MonoBehaviour
     public void head2()
     {
         anim.SetInteger("doll", 2);
-        anim.SetBool("acc1", true);
         Num = 2;
         Debug.Log("Num = " + Num);
         M_Doll1_2.SetActive(true);
@@ -54,7 +52,6 @@ public class DollMakerManager : MonoBehaviour
     public void head1()
     {
         anim.SetInteger("doll", 1);
-        anim.SetBool("acc1", true);
         Num = 1;
         Debug.Log("Num = " + Num);
         M_Doll1_1.SetActive(true);
@@ -66,7 +63,6 @@ public class DollMakerManager : MonoBehaviour
     public void head4()
     {
         anim.SetInteger("doll", 4);
-        anim.SetBool("acc1", true);
         Num = 4;
         Debug.Log("Num = " + Num);
         M_Doll1_1.SetActive(false);
@@ -77,7 +73,7 @@ public class DollMakerManager : MonoBehaviour
     }
     public void Doll1_1()
     {
-        if(Num == 1||Num == 6 || Num == 7 || Num == 8)
+        if(Num == 1||  Num == 6 || Num == 7 || Num == 8)
         {
             anim.SetInteger("doll", 5);
             Num = 5;
@@ -97,7 +93,7 @@ public class DollMakerManager : MonoBehaviour
     }
     public void Doll1_3()
     {
-        if (Num == 1 || Num == 5 || Num == 8 || Num == 6)
+        if (Num == 1 || Num == 5 || Num == 8 || Num == 6 )
         {
             anim.SetInteger("doll", 7);
             Num = 7;
@@ -107,7 +103,7 @@ public class DollMakerManager : MonoBehaviour
     }
     public void Doll1_4()
     {
-        if (Num == 1 || Num == 5 || Num == 7 || Num == 6)
+        if (Num == 1 || Num == 5 || Num == 7 || Num == 6 )
         {
             anim.SetInteger("doll", 8);
             Num = 8;
@@ -117,7 +113,7 @@ public class DollMakerManager : MonoBehaviour
     }
     public void Doll2_1()
     {
-        if (Num == 2 || Num == 10 || Num == 11 || Num == 12)
+        if (Num == 2 || Num == 10 || Num == 11 || Num == 12 )
         {
             anim.SetInteger("doll", 9);
             Num = 9;
@@ -127,7 +123,7 @@ public class DollMakerManager : MonoBehaviour
     }
     public void Doll2_2()
     {
-        if (Num == 2|| Num == 10 || Num == 12 || Num == 9)
+        if (Num == 2|| Num == 11 || Num == 12 || Num == 9)
         {
             anim.SetInteger("doll", 10);
             Num = 10;
@@ -242,7 +238,6 @@ public class DollMakerManager : MonoBehaviour
             anim.SetInteger("doll", 0);
             Num = 0;
             Debug.Log("Num = " + Num);
-            Coin.instance.coin -= 1;
         }
     }
     private void Update()

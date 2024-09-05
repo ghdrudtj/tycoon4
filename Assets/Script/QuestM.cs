@@ -14,7 +14,7 @@ public class QuestM : MonoBehaviour
     public bool isClear;
 
     public Image order;
-    public Sprite d0;
+    public GameObject d0;
     public Sprite d1;
     public Sprite d2;
     public Sprite d3;
@@ -45,9 +45,11 @@ public class QuestM : MonoBehaviour
     }
     public void Start()
     {
+        d0.SetActive(false);
     }
     public void Quest()
     {
+        d0.SetActive(true);
         timerCoroutine = StartCoroutine(TimerCoroutine());
         QNum = Random.Range(1, 21);
         Debug.Log("QNum = " + QNum);
@@ -131,6 +133,10 @@ public class QuestM : MonoBehaviour
         {
             order.sprite = d20;
         }
+        if(QNum == 0)
+        {
+            d0.SetActive(false);
+        }
     }
 
     public void Clear()
@@ -141,9 +147,9 @@ public class QuestM : MonoBehaviour
         if (QNum == Num)
         {
             Debug.Log("클리어");
-            QNum = 0;
-            order.sprite = d0;
-            if(Num > 4)
+            DollMakerManager.instance.Doll0();
+            d0.SetActive(false);
+            if (Num > 4)
             {
                 Coin.instance.coin += 10;
             }
@@ -152,8 +158,8 @@ public class QuestM : MonoBehaviour
         else if (QNum != Num)
         {
             Debug.Log("no");
-            QNum = 0;
-            order.sprite = d0;
+            DollMakerManager.instance.Doll0();
+            d0.SetActive(false);
             Coin.instance.coin -= 30;
         }
 
@@ -175,7 +181,7 @@ public class QuestM : MonoBehaviour
       
         Debug.Log("타이머 끝");
         QNum = 0;
-        order.sprite = d0;
+        d0.SetActive(false);
         Coin.instance.coin -= 30;
     }
 }

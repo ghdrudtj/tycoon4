@@ -14,12 +14,12 @@ public class Spider : MonoBehaviour
 
     void Start()
     {
-        StartCoroutine(ThiefSpawnRoutine());
+        StartCoroutine(spiderSpawnRoutine());
     }
 
-    IEnumerator ThiefSpawnRoutine()
+    IEnumerator spiderSpawnRoutine()
     {
-        while (true) // 계속 반복하여 도둑을 일정 간격으로 소환
+        while (true) // 계속 반복하여 거미를 일정 간격으로 소환
         {
             yield return new WaitForSecondsRealtime(spawnInterval);
             if (!isspiderActive)
@@ -46,6 +46,8 @@ public class Spider : MonoBehaviour
                 Evaluatespider();
             }
             isspiderActive = false;
+            spawnInterval = Random.Range(30, 41);
+            Debug.Log("다음 거미 소환 시간 = " + spawnInterval);
         }
     }
 
@@ -82,13 +84,11 @@ public class Spider : MonoBehaviour
             currentspiderClicks++;
             Debug.Log("클릭 수 = " + currentspiderClicks);
 
-            // 클릭 수가 목표에 도달하면 도둑을 즉시 비활성화
+            // 클릭 수가 목표에 도달하면 거미를 즉시 비활성화
             if (currentspiderClicks >= spiderMaxNum)
             {
                 Evaluatespider();
             }
-
         }
     }
-
 }
