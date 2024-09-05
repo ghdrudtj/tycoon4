@@ -38,6 +38,7 @@ public class QuestM : MonoBehaviour
 
     [SerializeField]private float maxTimer = 10;
     Coroutine timerCoroutine;
+    private bool timer;
 
     public void lnit()
     {
@@ -46,13 +47,20 @@ public class QuestM : MonoBehaviour
     public void Start()
     {
         d0.SetActive(false);
+
+        timer = false;
     }
     public void Quest()
     {
         d0.SetActive(true);
-        timerCoroutine = StartCoroutine(TimerCoroutine());
+        if(!timer)
+        {
+            timerCoroutine = StartCoroutine(TimerCoroutine());
+        }
+        
         QNum = Random.Range(1, 21);
         Debug.Log("QNum = " + QNum);
+
         if (QNum == 1)
         {
             order.sprite = d1;
@@ -73,67 +81,67 @@ public class QuestM : MonoBehaviour
         {
             order.sprite = d5;
         }
-        if (QNum == 6)
-        {
-            order.sprite = d6;
-        }
-        if (QNum == 7)
-        {
-            order.sprite = d7;
-        }
-        if (QNum == 8)
-        {
-            order.sprite = d8;
-        }
         if (QNum == 9)
         {
             order.sprite = d9;
-        }
-        if (QNum == 10)
-        {
-            order.sprite = d10;
-        }
-        if (QNum == 11)
-        {
-            order.sprite = d11;
-        }
-        if (QNum == 12)
-        {
-            order.sprite = d12;
         }
         if (QNum == 13)
         {
             order.sprite = d13;
         }
-        if (QNum == 14)
-        {
-            order.sprite = d14;
-        }
-        if (QNum == 15)
-        {
-            order.sprite = d15;
-        }
-        if (QNum == 16)
-        {
-            order.sprite = d16;
-        }
         if (QNum == 17)
         {
             order.sprite = d17;
+        }
+        if (QNum == 6)
+        {
+            order.sprite = d6;
+        }
+        if (QNum == 10)
+        {
+            order.sprite = d10;
+        }
+        if (QNum == 14)
+        {
+            order.sprite = d14;
         }
         if (QNum == 18)
         {
             order.sprite = d18;
         }
+        if (QNum == 7)
+        {
+            order.sprite = d7;
+        }
+        if (QNum == 11)
+        {
+            order.sprite = d11;
+        }
+        if (QNum == 15)
+        {
+            order.sprite = d15;
+        }
         if (QNum == 19)
         {
             order.sprite = d19;
+        }
+        if (QNum == 8)
+        {
+            order.sprite = d8;
+        }
+        if (QNum == 12)
+        {
+            order.sprite = d12;
+        }
+        if (QNum == 16)
+        {
+            order.sprite = d16;
         }
         if (QNum == 20)
         {
             order.sprite = d20;
         }
-        if(QNum == 0)
+        if (QNum == 0)
         {
             d0.SetActive(false);
         }
@@ -162,7 +170,6 @@ public class QuestM : MonoBehaviour
             d0.SetActive(false);
             Coin.instance.coin -= 30;
         }
-
     }
     private void Update()
     {
@@ -171,7 +178,7 @@ public class QuestM : MonoBehaviour
     IEnumerator TimerCoroutine()
     {
         float currentTimer = 0f;
-
+        timer=true;
         while(currentTimer < maxTimer)
         {
             currentTimer += Time.deltaTime;
@@ -183,5 +190,6 @@ public class QuestM : MonoBehaviour
         QNum = 0;
         d0.SetActive(false);
         Coin.instance.coin -= 30;
+        timer = false;
     }
 }
