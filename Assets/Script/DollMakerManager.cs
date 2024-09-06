@@ -27,7 +27,7 @@ public class DollMakerManager : MonoBehaviour
         anim= GetComponent<Animator>(); 
         QNum = QuestM.instance.QNum;
     }
-    public void head3()
+    void head3()
     {
         anim.SetInteger("doll", 3);
         Num = 3;
@@ -38,7 +38,7 @@ public class DollMakerManager : MonoBehaviour
         M_Doll1_4.SetActive(false);
         Coin.instance.coin -= 1;
     }
-    public void head2()
+    void head2()
     {
         anim.SetInteger("doll", 2);
         Num = 2;
@@ -49,7 +49,7 @@ public class DollMakerManager : MonoBehaviour
         M_Doll1_4.SetActive(false);
             Coin.instance.coin -= 1;
     }
-    public void head1()
+    void head1()
     {
         anim.SetInteger("doll", 1);
         Num = 1;
@@ -60,7 +60,7 @@ public class DollMakerManager : MonoBehaviour
         M_Doll1_4.SetActive(false);
         Coin.instance.coin -= 1;
     }
-    public void head4()
+    void head4()
     {
         anim.SetInteger("doll", 4);
         Num = 4;

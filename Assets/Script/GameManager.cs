@@ -10,13 +10,11 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Unlock Unlock;
     void Start()
     {
-        
         coin.lnit();
         QuestM.lnit();
         dollMakerManager.lnit();
         Unlock.lnit();
     }
-
     void Update()
     {
     }

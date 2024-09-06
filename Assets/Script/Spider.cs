@@ -5,9 +5,9 @@ public class Spider : MonoBehaviour
 {
     public static Spider spider;
     public GameObject spiderObj;
-    public int spiderMaxNum = 20; // 거미의 최대 클릭 수
-    public float spawnInterval = 30;  // 거미 소환 간격
-    public float spiderActiveDuration = 5f; // 거미 활성화 시간
+    [SerializeField] private int spiderMaxNum = 20; // 거미의 최대 클릭 수
+    [SerializeField] private float spawnInterval = 30;  // 거미 소환 간격
+    [SerializeField] private float spiderActiveDuration = 5f; // 거미 활성화 시간
 
     private int currentspiderClicks; // 거미 클릭한 횟수
     private bool isspiderActive; // 거미 소환 여부
@@ -50,14 +50,12 @@ public class Spider : MonoBehaviour
             Debug.Log("다음 거미 소환 시간 = " + spawnInterval);
         }
     }
-
     void Spawnspider()
     {
         spiderObj.SetActive(true);
         currentspiderClicks = 0; // 클릭 수 초기화
         Debug.Log("도둑 소환!");
     }
-
     void Evaluatespider()
     {
         if (currentspiderClicks >= spiderMaxNum)
@@ -76,7 +74,6 @@ public class Spider : MonoBehaviour
         }
         spiderObj.SetActive(false);
     }
-
     public void spiderClick()
     {
         if (isspiderActive)

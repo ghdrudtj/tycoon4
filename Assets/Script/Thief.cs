@@ -6,9 +6,9 @@ public class Thief : MonoBehaviour
 {
     public static Thief thief;
     public GameObject thiefObj;
-    public int thiefMaxNum = 10; // 도둑의 최대 클릭 수
-    public float spawnInterval = 5;  // 도둑 소환 간격
-    public float thiefActiveDuration = 5f; // 도둑 활성화 시간
+    [SerializeField] private int thiefMaxNum = 10; // 도둑의 최대 클릭 수
+    [SerializeField] private float spawnInterval = 5;  // 도둑 소환 간격
+    [SerializeField] private float thiefActiveDuration = 5f; // 도둑 활성화 시간
     public int coin_m;
 
     private int currentThiefClicks;
@@ -47,19 +47,17 @@ public class Thief : MonoBehaviour
             }
             else
             {
-                EvaluateThief();
+                ThiefClick();
             }
             isThiefActive = false;
         }
     }
-
     void SpawnThief()
     {
         thiefObj.SetActive(true);
         currentThiefClicks = 0; // 클릭 수 초기화
         Debug.Log("도둑 소환!");
     }
-
     void EvaluateThief()
     {
         if (currentThiefClicks >= thiefMaxNum)
@@ -79,7 +77,6 @@ public class Thief : MonoBehaviour
         }
         thiefObj.SetActive(false);
     }
-
     public void ThiefClick()
     {
         if (isThiefActive)
@@ -95,7 +92,6 @@ public class Thief : MonoBehaviour
             
         }
     }
-
     private void Update()
     {
     }

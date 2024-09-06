@@ -9,9 +9,9 @@ public class LightOut : MonoBehaviour
     public GameObject L_out0bj;
     public GameObject L_Warning;
 
-    public float spawnInterval = 30;
-    public float LightOutActiveDuration;
-    private bool isLightOutActive;
+    [SerializeField] private float spawnInterval = 30;
+    [SerializeField] private float LightOutActiveDuration;
+    [SerializeField] private bool isLightOutActive;
     void Start()
     {
         StartCoroutine(LigherOutSpawnRoutine());

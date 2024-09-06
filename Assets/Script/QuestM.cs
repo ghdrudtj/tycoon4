@@ -12,7 +12,8 @@ public class QuestM : MonoBehaviour
     public int QNum;
     public int Num;
 
-    public bool isClear;
+    private bool isClear;
+    public GameObject QBtn;
 
     public UnityEngine.UI.Image order;
     public GameObject d0;
@@ -57,10 +58,9 @@ public class QuestM : MonoBehaviour
     public void Quest()
     {
         d0.SetActive(true);
-        if(!timer)
-        {
-            timerCoroutine = StartCoroutine(TimerCoroutine());
-        }
+        
+        timerCoroutine = StartCoroutine(TimerCoroutine());
+        
 
         if (Unlock.instance != null) // Check if Unlock.Instance is not null
         {
@@ -111,18 +111,16 @@ public class QuestM : MonoBehaviour
             case 20: order.sprite = d20; break;
             default: order.sprite = null; break;
         }
-
-        
         if (QNum == 0)
         {
             d0.SetActive(false);
         }
+        QBtn.SetActive(false);
     }
 
     public void Clear()
     {
         StopCoroutine(timerCoroutine);
-        float currentTimer = 0f;
 
         if (QNum == Num)
         {
@@ -142,6 +140,7 @@ public class QuestM : MonoBehaviour
             d0.SetActive(false);
             Coin.instance.coin -= 30;
         }
+        QBtn.SetActive(true);
     }
     private void Update()
     {

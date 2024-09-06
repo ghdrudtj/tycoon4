@@ -7,13 +7,16 @@ public class GameUI : MonoBehaviour
 {
     public static GameUI instance;  
     public GameObject MenuUI;
-    bool GameActive =false;
+    public bool GameActive =false;
 
     private void Update()
     {
         Menu();
     }
-
+    public void lnit()
+    {
+        instance = this;
+    }
     private void Menu()
     {
         if (Input.GetKeyDown(KeyCode.Escape)) 
@@ -23,7 +26,7 @@ public class GameUI : MonoBehaviour
             {
                 Time.timeScale = 1.0f;
                 GameActive = false;
-                Debug.Log("게임 다시 실행");
+                Debug.Log("게임 다시실행");
             }
             else
             {

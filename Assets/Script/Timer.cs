@@ -19,7 +19,6 @@ public class Timer : MonoBehaviour
         //timerTxt.text = $"{currentTimer:N1}/{maxTimer:N1}";
         timerImg.fillAmount = currentTimer / maxTimer;
     }
-    
     void Update()
     {
         
