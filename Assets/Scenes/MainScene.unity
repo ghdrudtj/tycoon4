@@ -7036,7 +7036,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   L_out0bj: {fileID: 81050659}
   L_Warning: {fileID: 192968437}
-  spawnInterval: 5
+  spawnInterval: 60
   LightOutActiveDuration: 20
 --- !u!1 &1639444577
 GameObject:
