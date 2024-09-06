@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Unlock : MonoBehaviour
 {
-    public static Unlock Instance;
+    public static Unlock instance;
 
     public GameObject Unlock1obj;
     public GameObject Unlock2obj;
@@ -23,6 +23,10 @@ public class Unlock : MonoBehaviour
         Unlock_3 = false;
         Unlock_4 = false;
     }
+    public void lnit()
+    {
+        instance = this;
+    }
     public void Unlock1()
     {
         if(Coin.instance.coin >= 200)
@@ -34,12 +38,12 @@ public class Unlock : MonoBehaviour
         }
         else
         {
-            Debug.Log("돈 부족함");
+            Debug.Log("1돈 부족함");
         }
     }
     public void Unlock2()
     {
-        if (Coin.instance.coin >= 200)
+        if (Coin.instance.coin >= 200 & Unlock_1==true)
         {
             Unlock_2 = true;
             Coin.instance.coin -= 200;
@@ -48,12 +52,12 @@ public class Unlock : MonoBehaviour
         }
         else
         {
-            Debug.Log("돈 부족함");
+            Debug.Log("2조건 불충족");
         }
     }
     public void Unlock3()
     {
-        if (Coin.instance.coin >= 200)
+        if (Coin.instance.coin >= 200 & Unlock_1 == true & Unlock_2 == true)
         {
             Unlock_3 = true;
             Coin.instance.coin -= 200;
@@ -62,12 +66,12 @@ public class Unlock : MonoBehaviour
         }
         else
         {
-            Debug.Log("돈 부족함");
+            Debug.Log("3조건 불충족");
         }
     }
     public void Unlock4()
     {
-        if (Coin.instance.coin >= 200)
+        if (Coin.instance.coin >= 200 & Unlock_1 == true & Unlock_2 == true & Unlock_3 == true)
         {
             Unlock_4 = true;
             Coin.instance.coin -= 200;
@@ -76,7 +80,7 @@ public class Unlock : MonoBehaviour
         }
         else
         {
-            Debug.Log("돈 부족함");
+            Debug.Log("4조건 불충족");
         }
     }
 }
