@@ -2847,7 +2847,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.31022224}
   m_AnchorMax: {x: 0.87643754, y: 0.5}
-  m_AnchoredPosition: {x: 131, y: 7}
+  m_AnchoredPosition: {x: -460, y: -173}
   m_SizeDelta: {x: 159.305, y: 156.1834}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &800866600
@@ -5391,7 +5391,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.31022224}
   m_AnchorMax: {x: 0.87643754, y: 0.5}
-  m_AnchoredPosition: {x: 440, y: 7}
+  m_AnchoredPosition: {x: -166, y: -173}
   m_SizeDelta: {x: 159.305, y: 156.1834}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1214345799
@@ -6095,6 +6095,7 @@ MonoBehaviour:
   coin: {fileID: 1631632122}
   dollMakerManager: {fileID: 1994504977}
   QuestM: {fileID: 1130899507}
+  Unlock: {fileID: 86424966}
 --- !u!4 &1471539568
 Transform:
   m_ObjectHideFlags: 0
