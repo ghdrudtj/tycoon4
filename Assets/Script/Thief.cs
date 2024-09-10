@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Thief : MonoBehaviour
 {
@@ -72,8 +73,8 @@ public class Thief : MonoBehaviour
         if (currentThiefClicks <= thiefMaxNum)
         {
             Debug.Log("µµµÏ ¹æ¾î ½ÇÆÐ!");
-            Coin.instance.coin -= Coin.instance.coin / coin_m;
             Debug.Log("ÈÉÃÄ°£µ· = " + Coin.instance.coin / coin_m);
+            Coin.instance.coin -= Coin.instance.coin / coin_m;
         }
         thiefObj.SetActive(false);
     }
@@ -89,7 +90,6 @@ public class Thief : MonoBehaviour
             {
                 EvaluateThief();
             }
-            
         }
     }
     private void Update()

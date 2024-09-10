@@ -46,6 +46,8 @@ public class QuestM : MonoBehaviour
     private List<int> Unlock2 = new List<int> { 1, 2, 3, 4, 5, 9, 13, 17, 6, 10, 14, 18 };
     private List<int> Unlock3 = new List<int> { 1, 2, 3, 4, 5, 9, 13, 17, 6, 10, 14, 18, 7, 11, 15, 19 };
 
+    [SerializeField] private int coin_m;
+
     public void lnit()
     {
         instance = this;
@@ -138,7 +140,7 @@ public class QuestM : MonoBehaviour
             Debug.Log("no");
             DollMakerManager.instance.Doll0();
             d0.SetActive(false);
-            Coin.instance.coin -= 30;
+            Coin.instance.coin -= coin_m;
         }
         QBtn.SetActive(true);
     }

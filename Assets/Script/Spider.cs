@@ -12,9 +12,11 @@ public class Spider : MonoBehaviour
     private int currentspiderClicks; // 거미 클릭한 횟수
     private bool isspiderActive; // 거미 소환 여부
 
+    public Animation S_Anim;
     void Start()
     {
         StartCoroutine(spiderSpawnRoutine());
+        S_Anim = GetComponent<Animation>();
     }
 
     IEnumerator spiderSpawnRoutine()
@@ -45,6 +47,7 @@ public class Spider : MonoBehaviour
             {
                 Evaluatespider();
             }
+            
             isspiderActive = false;
             spawnInterval = Random.Range(30, 41);
             Debug.Log("다음 거미 소환 시간 = " + spawnInterval);
@@ -54,7 +57,7 @@ public class Spider : MonoBehaviour
     {
         spiderObj.SetActive(true);
         currentspiderClicks = 0; // 클릭 수 초기화
-        Debug.Log("도둑 소환!");
+        Debug.Log("거미 소환!");
     }
     void Evaluatespider()
     {
@@ -62,16 +65,18 @@ public class Spider : MonoBehaviour
         {
             Debug.Log("거미 방어 성공!");
         }
-
+        S_Anim.Play();
         spiderObj.SetActive(false);
     }
     void Overspider()
     {
+        Invoke("S_Anim" ,1f);
         if (currentspiderClicks <= spiderMaxNum)
         {
             Debug.Log("거미 방어 실패!");
             DollMakerManager.instance.Doll0();
         }
+        S_Anim.Play();
         spiderObj.SetActive(false);
     }
     public void spiderClick()

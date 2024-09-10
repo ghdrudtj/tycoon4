@@ -1386,7 +1386,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.00030517578, y: -39}
+  m_AnchoredPosition: {x: 0.00030517578, y: -31.2}
   m_SizeDelta: {x: 0, y: -2.385498}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &411614317
@@ -1411,7 +1411,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 15
+    m_FontSize: 10
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 1
@@ -4348,7 +4348,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -37}
+  m_AnchoredPosition: {x: 0, y: -30.2}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &998027152
@@ -4373,7 +4373,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 15
+    m_FontSize: 10
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 1
@@ -4479,6 +4479,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1003795203}
   - component: {fileID: 1003795204}
+  - component: {fileID: 1003795205}
   m_Layer: 0
   m_Name: Spider
   m_TagString: Untagged
@@ -4495,7 +4496,7 @@ Transform:
   m_GameObject: {fileID: 1003795202}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.25, y: 5.01, z: 9.943524}
+  m_LocalPosition: {x: 0.25, y: 4.42, z: 9.943524}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4553,6 +4554,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!111 &1003795205
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1003795202}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 9fee1325748dcbc49a3cff14ee3ca52f, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 9fee1325748dcbc49a3cff14ee3ca52f, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &1014626010
 GameObject:
   m_ObjectHideFlags: 0
@@ -5013,6 +5030,7 @@ MonoBehaviour:
   d19: {fileID: 21300000, guid: 9dd0a688c53082241a732775dc07d9b1, type: 3}
   d20: {fileID: 21300000, guid: b45bbf9ab966bfe4a9e543190943a988, type: 3}
   maxTimer: 10
+  coin_m: 30
 --- !u!4 &1130899508
 Transform:
   m_ObjectHideFlags: 0
@@ -6311,8 +6329,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -573.19, y: 270}
-  m_SizeDelta: {x: 773.63, y: 540}
+  m_AnchoredPosition: {x: -301.46, y: 143.96307}
+  m_SizeDelta: {x: 357.09, y: 252.0739}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1503951629
 MonoBehaviour:
@@ -6383,7 +6401,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -7084,6 +7102,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thiefObj: {fileID: 1974124641}
+  thiefMaxNum: 10
+  spawnInterval: 10
+  thiefActiveDuration: 5
   coin_m: 10
 --- !u!114 &1637640911
 MonoBehaviour:
@@ -7098,6 +7119,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spiderObj: {fileID: 1003795202}
+  spiderMaxNum: 20
+  spawnInterval: 5
+  spiderActiveDuration: 5
+  S_Anim: {fileID: 1003795205}
 --- !u!114 &1637640912
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7112,6 +7137,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   L_out0bj: {fileID: 81050659}
   L_Warning: {fileID: 192968437}
+  spawnInterval: 60
+  LightOutActiveDuration: 0
+  isLightOutActive: 0
 --- !u!1 &1639444577
 GameObject:
   m_ObjectHideFlags: 0
@@ -8167,8 +8195,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -107.99454, y: 350.20618}
-  m_SizeDelta: {x: 259.6559, y: 379.5877}
+  m_AnchoredPosition: {x: -52.494, y: 182.05296}
+  m_SizeDelta: {x: 104.9839, y: 175.8841}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2084875756
 MonoBehaviour:
@@ -8239,7 +8267,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
