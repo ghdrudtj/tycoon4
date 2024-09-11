@@ -21,7 +21,6 @@ public class DollMakerManager : MonoBehaviour
     {
         instance = this;
     }
-
     void Start()
     {
         anim= GetComponent<Animator>(); 

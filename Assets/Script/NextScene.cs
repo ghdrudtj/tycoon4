@@ -13,6 +13,7 @@ public class NextScene : MonoBehaviour
     {
         SceneManager.LoadScene("StoreScene");
     }
+
     void Start()
     {
         

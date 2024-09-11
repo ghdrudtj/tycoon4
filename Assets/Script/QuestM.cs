@@ -47,6 +47,7 @@ public class QuestM : MonoBehaviour
     private List<int> Unlock3 = new List<int> { 1, 2, 3, 4, 5, 9, 13, 17, 6, 10, 14, 18, 7, 11, 15, 19 };
 
     [SerializeField] private int coin_m;
+    public int clearNum;
 
     public void lnit()
     {
@@ -63,7 +64,6 @@ public class QuestM : MonoBehaviour
         
         timerCoroutine = StartCoroutine(TimerCoroutine());
         
-
         if (Unlock.instance != null) // Check if Unlock.Instance is not null
         {
             if (Unlock.instance.Unlock_4 == true)
@@ -88,7 +88,6 @@ public class QuestM : MonoBehaviour
             }
         }
         Debug.Log("QNum = " + QNum);
-
         switch (QNum)
         {
             case 1: order.sprite = d1; break;
@@ -119,7 +118,6 @@ public class QuestM : MonoBehaviour
         }
         QBtn.SetActive(false);
     }
-
     public void Clear()
     {
         StopCoroutine(timerCoroutine);
@@ -134,6 +132,7 @@ public class QuestM : MonoBehaviour
                 Coin.instance.coin += 10;
             }
             Coin.instance.coin += 30;
+            ++clearNum;
         }
         else if (QNum != Num)
         {

@@ -12,9 +12,12 @@ public class LightOut : MonoBehaviour
     [SerializeField] private float spawnInterval = 30;
     [SerializeField] private float LightOutActiveDuration;
     [SerializeField] private bool isLightOutActive;
+
+    [SerializeField] private Animation L_Anim;
     void Start()
     {
         StartCoroutine(LigherOutSpawnRoutine());
+        L_Anim = L_Warning.GetComponent<Animation>();
     }
     IEnumerator LigherOutSpawnRoutine()
     {
@@ -23,12 +26,12 @@ public class LightOut : MonoBehaviour
             yield return new WaitForSecondsRealtime(spawnInterval);
             if (!isLightOutActive)
             {
+                LightOutWarning();
+                Invoke("SpawnLightOut", 0.5f);
+                isLightOutActive = true;
+                SpawnLightOut();
                 LightOutActiveDuration = Random.Range(15, 31);
                 Debug.Log("소등 진행 시간 = " + LightOutActiveDuration);
-                LightOutWarning();
-                Invoke("SpawnLightOut", 2f);
-                isLightOutActive = true;
-
                 // 소등이 활성화되는 동안 대기
                 float currentTime = 0f;
                 while (currentTime < LightOutActiveDuration)
@@ -50,10 +53,10 @@ public class LightOut : MonoBehaviour
         L_out0bj.SetActive(true);
         Debug.Log("소등");
     }
-
     void LightOutWarning()
     {
         L_Warning.SetActive(true);
         Debug.Log("소등경고");
+        L_Anim.Play();
     }
 }
