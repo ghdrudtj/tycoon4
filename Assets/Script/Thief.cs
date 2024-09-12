@@ -21,7 +21,6 @@ public class Thief : MonoBehaviour
     {
         StartCoroutine(ThiefSpawnRoutine());
     }
-
     IEnumerator ThiefSpawnRoutine()
     {
         while (true) // 계속 반복하여 도둑을 일정 간격으로 소환
