@@ -13,14 +13,12 @@ public class Spider : MonoBehaviour
     private int currentspiderClicks; // 거미 클릭한 횟수
     private bool isspiderActive; // 거미 소환 여부
 
-    public Animation S_out;
-    //public Animation S_act;
+    public Animator animator;
     void Start()
     {
         StartCoroutine(spiderSpawnRoutine());
-        S_out = spiderObj.GetComponent<Animation>();
+        animator = spiderObj.GetComponent<Animator>();
     }
-
     IEnumerator spiderSpawnRoutine()
     {
         while (true) // 계속 반복하여 거미를 일정 간격으로 소환
@@ -36,28 +34,30 @@ public class Spider : MonoBehaviour
                 float currentTime = 0f;
                 while (currentTime < spiderActiveDuration)
                 {
+                    animator.SetInteger("S_int", 0);
                     currentTime += Time.deltaTime;
                     yield return null;
                 }
             }
-            S_out.Play();
+            animator.SetInteger("S_int", 2);
             // 다음 거미 소환을 위한 대기
             if (currentspiderClicks <= spiderMaxNum)
             {
-                Invoke("Overspider",0.5f);
+                Overspider();
             }
             else
             {
-                Invoke("Evaluatespider", 0.5f);
+                Evaluatespider();
             }
-            isspiderActive = false;
-            spawnInterval = Random.Range(30, 41);
-            Debug.Log("다음 거미 소환 시간 = " + spawnInterval);
+                isspiderActive = false;
+                spawnInterval = Random.Range(30, 41);
+                Debug.Log("다음 거미 소환 시간 = " + spawnInterval);
         }
     }
     void Spawnspider()
     {
         spiderObj.SetActive(true);
+        animator.SetInteger("S_int", 1);
         currentspiderClicks = 0; // 클릭 수 초기화
         Debug.Log("거미 소환!");
     }
@@ -78,7 +78,7 @@ public class Spider : MonoBehaviour
         }
         spiderObj.SetActive(false);
     }
-    public void spiderClick()
+    void spiderClick()
     {
         if (isspiderActive)
         {
@@ -92,5 +92,4 @@ public class Spider : MonoBehaviour
             }
         }
     }
-   
 }

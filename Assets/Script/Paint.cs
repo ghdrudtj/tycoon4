@@ -3,33 +3,29 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class LightOut : MonoBehaviour
+public class Paint : MonoBehaviour
 {
-    public static LightOut instance;
-    public GameObject L_out0bj;
-    public GameObject L_Warning;
+    public static Paint paint;
+    public GameObject paintObj;
 
-    [SerializeField] private float spawnInterval; 
+    [SerializeField] private float spawnInterval;
     [SerializeField] private float LightOutActiveDuration;
     [SerializeField] private bool isLightOutActive;
 
-    [SerializeField] private Animation L_Anim;
     void Start()
     {
-        StartCoroutine(LigherOutSpawnRoutine());
-        L_Anim = L_Warning.GetComponent<Animation>();
+        StartCoroutine(PaintSpawnRoutine());
     }
-    IEnumerator LigherOutSpawnRoutine()
+    IEnumerator PaintSpawnRoutine()
     {
         while (true) // 계속 반복하여 소등을 일정 간격으로 소환
         {
             yield return new WaitForSecondsRealtime(spawnInterval);
             if (!isLightOutActive)
             {
-                LightOutWarning();
+                SpawnPaint();
                 Invoke("SpawnLightOut", 0.5f);
                 isLightOutActive = true;
-                SpawnLightOut();
                 Debug.Log("소등 진행 시간 = " + LightOutActiveDuration);
                 // 소등이 활성화되는 동안 대기
                 float currentTime = 0f;
@@ -41,21 +37,14 @@ public class LightOut : MonoBehaviour
             }
 
             isLightOutActive = false;
-            L_out0bj.SetActive(false);
-            L_Warning.SetActive(false);
+            paintObj.SetActive(false);
             spawnInterval = Random.Range(50, 61);
-            Debug.Log("다음 소등 시간 = " + spawnInterval);
+            Debug.Log("다음 페인트 시간 = " + spawnInterval);
         }
     }
-    void SpawnLightOut()
+    void SpawnPaint()
     {
-        L_out0bj.SetActive(true);
-        Debug.Log("소등");
-    }
-    void LightOutWarning()
-    {
-        L_Warning.SetActive(true);
-        Debug.Log("소등경고");
-        L_Anim.Play();
+        paintObj.SetActive(true);
+        Debug.Log("페인트");
     }
 }
