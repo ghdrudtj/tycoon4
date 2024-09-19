@@ -7051,7 +7051,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cointext: {fileID: 1631632120}
-  coin: 500
+  coin: 20
 --- !u!1 &1637640908
 GameObject:
   m_ObjectHideFlags: 0

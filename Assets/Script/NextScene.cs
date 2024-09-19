@@ -9,11 +9,14 @@ public class NextScene : MonoBehaviour
     {
         SceneManager.LoadScene("MainScene");
     }
-    public void Store()
+    public void GameStart()
     {
-        SceneManager.LoadScene("StoreScene");
+        SceneManager.LoadScene("StartScene");
     }
-
+    public void Over()
+    {
+        SceneManager.LoadScene("OverScene");
+    }
     void Start()
     {
         
