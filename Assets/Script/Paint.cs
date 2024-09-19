@@ -14,6 +14,7 @@ public class Paint : MonoBehaviour
 
     void Start()
     {
+        spawnInterval = Random.Range(50, 71);
         StartCoroutine(PaintSpawnRoutine());
     }
     IEnumerator PaintSpawnRoutine()
@@ -38,7 +39,7 @@ public class Paint : MonoBehaviour
 
             isLightOutActive = false;
             paintObj.SetActive(false);
-            spawnInterval = Random.Range(50, 61);
+            spawnInterval = Random.Range(50, 71);
             Debug.Log("다음 페인트 시간 = " + spawnInterval);
         }
     }

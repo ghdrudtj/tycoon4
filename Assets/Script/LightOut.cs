@@ -16,6 +16,7 @@ public class LightOut : MonoBehaviour
     [SerializeField] private Animation L_Anim;
     void Start()
     {
+        spawnInterval = Random.Range(50, 71);
         StartCoroutine(LigherOutSpawnRoutine());
         L_Anim = L_Warning.GetComponent<Animation>();
     }
