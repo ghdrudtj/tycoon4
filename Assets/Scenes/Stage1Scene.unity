@@ -889,7 +889,7 @@ GameObject:
   - component: {fileID: 164061359}
   - component: {fileID: 164061358}
   m_Layer: 5
-  m_Name: Button (Legacy)
+  m_Name: ' Destruction Button (Legacy)'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1651,6 +1651,7 @@ RectTransform:
   m_Children:
   - {fileID: 904333429}
   - {fileID: 2079446729}
+  - {fileID: 1614551936}
   - {fileID: 823818164}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6192,6 +6193,14 @@ MonoBehaviour:
   dollMakerManager: {fileID: 1994504977}
   QuestM: {fileID: 1130899507}
   Unlock: {fileID: 86424966}
+  OrderclaerNum1: 0
+  OrderfailNum1: 0
+  OrderclaerNum2: 0
+  OrderfailNum2: 0
+  OrderclaerNum3: 0
+  OrderfailNum3: 0
+  ClaerText: {fileID: 2079446726}
+  OverText: {fileID: 1614551935}
 --- !u!4 &1471539568
 Transform:
   m_ObjectHideFlags: 0
@@ -6825,6 +6834,85 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1579451610}
   m_CullTransparentMesh: 1
+--- !u!1 &1614551935
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1614551936}
+  - component: {fileID: 1614551938}
+  - component: {fileID: 1614551937}
+  m_Layer: 5
+  m_Name: GameOver
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1614551936
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1614551935}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 456219422}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 5.2, y: 5}
+  m_SizeDelta: {x: 202.3108, y: 79.6338}
+  m_Pivot: {x: 0.5, y: 0.49999985}
+--- !u!114 &1614551937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1614551935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 0.038367633, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 50
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 5
+    m_MaxSize: 70
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: Game Over
+--- !u!222 &1614551938
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1614551935}
+  m_CullTransparentMesh: 1
 --- !u!1 &1618545913
 GameObject:
   m_ObjectHideFlags: 0
@@ -7051,7 +7139,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cointext: {fileID: 1631632120}
-  coin: 20
+  coin: 100
 --- !u!1 &1637640908
 GameObject:
   m_ObjectHideFlags: 0
@@ -8136,7 +8224,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 70
+    m_FontSize: 50
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 5
@@ -8147,7 +8235,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Clear
+  m_Text: Stage1 Clear
 --- !u!222 &2079446728
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8172,9 +8260,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 191, y: 231}
-  m_SizeDelta: {x: 160, y: 30}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 5.2, y: 5}
+  m_SizeDelta: {x: 202.3108, y: 79.6338}
+  m_Pivot: {x: 0.5, y: 0.49999985}
 --- !u!1 &2084875754
 GameObject:
   m_ObjectHideFlags: 0

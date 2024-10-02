@@ -15,6 +15,6 @@ public class Scene : MonoBehaviour
     }
     public void MainScene()
     {
-        SceneManager.LoadScene("MainScene");
+        SceneManager.LoadScene("Stage1Scene");
     }
 }
