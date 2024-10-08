@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LightOut : MonoBehaviour
 {
@@ -16,7 +17,7 @@ public class LightOut : MonoBehaviour
     [SerializeField] private Animation L_Anim;
     void Start()
     {
-        spawnInterval = Random.Range(50, 71);
+        spawnInterval = Random.Range(60, 71);
         StartCoroutine(LigherOutSpawnRoutine());
         L_Anim = L_Warning.GetComponent<Animation>();
     }
@@ -44,6 +45,7 @@ public class LightOut : MonoBehaviour
             isLightOutActive = false;
             L_out0bj.SetActive(false);
             L_Warning.SetActive(false);
+            QuestM.instance.order.GetComponent<Image>().color = Color.white;
             spawnInterval = Random.Range(50, 61);
             Debug.Log("다음 소등 시간 = " + spawnInterval);
         }
@@ -51,6 +53,7 @@ public class LightOut : MonoBehaviour
     void SpawnLightOut()
     {
         L_out0bj.SetActive(true);
+        QuestM.instance.order.GetComponent<Image>().color = Color.gray;
         Debug.Log("소등");
     }
     void LightOutWarning()

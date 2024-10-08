@@ -11,17 +11,14 @@ public class Unlock : MonoBehaviour
     public GameObject Unlock3obj;
     public GameObject Unlock4obj;
 
-    public bool Unlock_1;
-    public bool Unlock_2;
-    public bool Unlock_3;
-    public bool Unlock_4;
+    public bool Unlock_1 = false;
+    public bool Unlock_2 = false;
+    public bool Unlock_3 = false;
+    public bool Unlock_4 = false;
 
     private void Start()
     {
-        Unlock_1 = false;
-        Unlock_2 = false;
-        Unlock_3 = false;
-        Unlock_4 = false;
+        
     }
     public void lnit()
     {
