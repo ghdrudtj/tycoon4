@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -26,9 +24,12 @@ public class Unlock : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-            
+            DontDestroyOnLoad(gameObject);
         }
-       
+        else if (instance != this)
+        {
+            Destroy(gameObject);
+        }
     }
     public void Unlock1()
     {
@@ -90,8 +91,6 @@ public class Unlock : MonoBehaviour
     {
         if (Unlock_1 == true)
         {
-            Unlock_1 = true;
-            Unlock1obj.SetActive(false);
             if (SceneManager.GetActiveScene().name == "Stage2Scene" || SceneManager.GetActiveScene().name == "Stage3Scene")
             {
                 Unlock_1 = true;
@@ -100,8 +99,6 @@ public class Unlock : MonoBehaviour
         }
         if (Unlock_2 == true)
         {
-            Unlock_2 = true;
-            Unlock2obj.SetActive(false);
             if (SceneManager.GetActiveScene().name == "Stage2Scene" || SceneManager.GetActiveScene().name == "Stage3Scene")
             {
                 Unlock_2 = true;
@@ -125,4 +122,5 @@ public class Unlock : MonoBehaviour
             }
         }
     }
+    
 }

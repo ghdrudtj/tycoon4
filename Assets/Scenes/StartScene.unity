@@ -159,8 +159,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -693, y: -474}
-  m_SizeDelta: {x: 420.807, y: 118.47}
+  m_AnchoredPosition: {x: -699, y: -474}
+  m_SizeDelta: {x: 349.8125, y: 118.47}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &64501373
 MonoBehaviour:
@@ -292,8 +292,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -693, y: -258}
-  m_SizeDelta: {x: 420.807, y: 118.47}
+  m_AnchoredPosition: {x: -699, y: -258}
+  m_SizeDelta: {x: 349.8125, y: 118.47}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &263744099
 MonoBehaviour:
@@ -577,8 +577,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -693, y: -365.92505}
-  m_SizeDelta: {x: 420.807, y: 121.6714}
+  m_AnchoredPosition: {x: -699, y: -365.92505}
+  m_SizeDelta: {x: 349.8125, y: 121.6714}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &567989735
 MonoBehaviour:
@@ -732,7 +732,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 753b9fe9763a600408dd97c90b732b77, type: 3}
     m_FontSize: 50
     m_FontStyle: 1
     m_BestFit: 0
@@ -1266,7 +1266,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 753b9fe9763a600408dd97c90b732b77, type: 3}
     m_FontSize: 50
     m_FontStyle: 1
     m_BestFit: 0
@@ -1345,7 +1345,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 753b9fe9763a600408dd97c90b732b77, type: 3}
     m_FontSize: 50
     m_FontStyle: 1
     m_BestFit: 0
