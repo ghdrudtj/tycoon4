@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Unlock : MonoBehaviour
 {
@@ -11,26 +12,31 @@ public class Unlock : MonoBehaviour
     public GameObject Unlock3obj;
     public GameObject Unlock4obj;
 
-    public bool Unlock_1 = false;
-    public bool Unlock_2 = false;
-    public bool Unlock_3 = false;
-    public bool Unlock_4 = false;
+    public bool Unlock_1;
+    public bool Unlock_2;
+    public bool Unlock_3;
+    public bool Unlock_4;
 
     private void Start()
     {
-        
+
     }
     public void lnit()
     {
-        instance = this;
+        if (instance == null)
+        {
+            instance = this;
+            
+        }
+       
     }
     public void Unlock1()
     {
-        if(Coin.instance.coin >= 200)
+        if (Coin.instance.coin >= 200)
         {
             Unlock_1 = true;
             Coin.instance.coin -= 200;
-            Destroy(Unlock1obj);
+            Unlock1obj.SetActive(false);
             Debug.Log("첫번째 해금");
         }
         else
@@ -44,7 +50,7 @@ public class Unlock : MonoBehaviour
         {
             Unlock_2 = true;
             Coin.instance.coin -= 200;
-            Destroy(Unlock2obj);
+            Unlock2obj.SetActive(false);
             Debug.Log("두번째 해금");
         }
         else
@@ -58,7 +64,7 @@ public class Unlock : MonoBehaviour
         {
             Unlock_3 = true;
             Coin.instance.coin -= 200;
-            Destroy(Unlock3obj);
+            Unlock3obj.SetActive(false);
             Debug.Log("세번째 해금");
         }
         else
@@ -72,12 +78,51 @@ public class Unlock : MonoBehaviour
         {
             Unlock_4 = true;
             Coin.instance.coin -= 200;
-            Destroy(Unlock4obj);
+            Unlock4obj.SetActive(false);
             Debug.Log("네번째 해금");
         }
         else
         {
             Debug.Log("4조건 불충족");
+        }
+    }
+    private void Update()
+    {
+        if (Unlock_1 == true)
+        {
+            Unlock_1 = true;
+            Unlock1obj.SetActive(false);
+            if (SceneManager.GetActiveScene().name == "Stage2Scene" || SceneManager.GetActiveScene().name == "Stage3Scene")
+            {
+                Unlock_1 = true;
+                Unlock1obj.SetActive(false);
+            }
+        }
+        if (Unlock_2 == true)
+        {
+            Unlock_2 = true;
+            Unlock2obj.SetActive(false);
+            if (SceneManager.GetActiveScene().name == "Stage2Scene" || SceneManager.GetActiveScene().name == "Stage3Scene")
+            {
+                Unlock_2 = true;
+                Unlock2obj.SetActive(false);
+            }
+        }
+        if (Unlock_3 == true)
+        {
+            if (SceneManager.GetActiveScene().name == "Stage2Scene" || SceneManager.GetActiveScene().name == "Stage3Scene")
+            {
+                Unlock_3 = true;
+                Unlock3obj.SetActive(false);
+            }
+        }
+        if (Unlock_4 == true)
+        {
+            if (SceneManager.GetActiveScene().name == "Stage2Scene" || SceneManager.GetActiveScene().name == "Stage3Scene")
+            {
+                Unlock_4 = true;
+                Unlock4obj.SetActive(false);
+            }
         }
     }
 }
