@@ -10,6 +10,8 @@ public class Paint : MonoBehaviour
     [SerializeField] private float LightOutActiveDuration;
     [SerializeField] private bool isLightOutActive;
 
+    [SerializeField] private AudioSource P_s;
+    [SerializeField] private AudioSource P_o;
     void Start()
     {
         spawnInterval = Random.Range(50, 61);
@@ -34,7 +36,7 @@ public class Paint : MonoBehaviour
                     yield return null;
                 }
             }
-
+            P_o.Play();
             isLightOutActive = false;
             paintObj.SetActive(false);
             spawnInterval = Random.Range(50, 61);
@@ -43,6 +45,7 @@ public class Paint : MonoBehaviour
     }
     void SpawnPaint()
     {
+        P_s.Play();
         paintObj.SetActive(true);
         Debug.Log("∆‰¿Œ∆Æ");
     }

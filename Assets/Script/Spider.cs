@@ -12,6 +12,10 @@ public class Spider : MonoBehaviour
     private int currentspiderClicks; // 거미 클릭한 횟수
     private bool isspiderActive; // 거미 소환 여부
 
+    [SerializeField] private AudioSource S_s;
+    [SerializeField] private AudioSource S_o;
+    [SerializeField] private AudioSource S_c;
+
     public Animator animator;
     void Start()
     {
@@ -56,6 +60,7 @@ public class Spider : MonoBehaviour
     }
     void Spawnspider()
     {
+        S_s.Play();
         spiderObj.SetActive(true);
         animator.SetInteger("S_int", 1);
         currentspiderClicks = 0; // 클릭 수 초기화
@@ -65,6 +70,7 @@ public class Spider : MonoBehaviour
     {
         if (currentspiderClicks >= spiderMaxNum)
         {
+            S_o.Play();
             Debug.Log("거미 방어 성공!");
         }
         spiderObj.SetActive(false);
@@ -73,6 +79,7 @@ public class Spider : MonoBehaviour
     {
         if (currentspiderClicks <= spiderMaxNum)
         {
+            S_o.Play();
             Debug.Log("거미 방어 실패!");
             DollMakerManager.instance.Doll0();
         }
@@ -84,7 +91,7 @@ public class Spider : MonoBehaviour
         {
             currentspiderClicks++;
             Debug.Log("클릭 수 = " + currentspiderClicks);
-
+            S_c.Play();
             // 클릭 수가 목표에 도달하면 거미를 즉시 비활성화
             if (currentspiderClicks >= spiderMaxNum)
             {

@@ -15,6 +15,8 @@ public class Unlock : MonoBehaviour
     public bool Unlock_3;
     public bool Unlock_4;
 
+    [SerializeField] private AudioSource U_s;
+
     private void Start()
     {
 
@@ -35,6 +37,7 @@ public class Unlock : MonoBehaviour
     {
         if (Coin.instance.coin >= 200)
         {
+            U_s.Play();
             Unlock_1 = true;
             Coin.instance.coin -= 200;
             Unlock1obj.SetActive(false);
@@ -49,6 +52,7 @@ public class Unlock : MonoBehaviour
     {
         if (Coin.instance.coin >= 200 & Unlock_1==true)
         {
+            U_s.Play();
             Unlock_2 = true;
             Coin.instance.coin -= 200;
             Unlock2obj.SetActive(false);
@@ -63,6 +67,7 @@ public class Unlock : MonoBehaviour
     {
         if (Coin.instance.coin >= 200 & Unlock_1 == true & Unlock_2 == true)
         {
+            U_s.Play();
             Unlock_3 = true;
             Coin.instance.coin -= 200;
             Unlock3obj.SetActive(false);
@@ -77,6 +82,7 @@ public class Unlock : MonoBehaviour
     {
         if (Coin.instance.coin >= 200 & Unlock_1 == true & Unlock_2 == true & Unlock_3 == true)
         {
+            U_s.Play();
             Unlock_4 = true;
             Coin.instance.coin -= 200;
             Unlock4obj.SetActive(false);

@@ -13,6 +13,10 @@ public class Thief : MonoBehaviour
     private int currentThiefClicks;
     private bool isThiefActive;
 
+    [SerializeField] private AudioSource T_s;
+    [SerializeField] private AudioSource T_o;
+    [SerializeField] private AudioSource T_c;
+
     private bool Thiefclear;
     private bool Thiefover;
     void Start()
@@ -27,6 +31,7 @@ public class Thief : MonoBehaviour
             if (!isThiefActive)
             {
                 // µµµÏ ¼ÒÈ¯
+                T_s.Play();
                 SpawnThief();
                 isThiefActive = true;
 
@@ -60,6 +65,7 @@ public class Thief : MonoBehaviour
     {
         if (currentThiefClicks >= thiefMaxNum)
         {
+            T_o.Play();
             Debug.Log("µµµÏ ¹æ¾î ¼º°ø!");
         }
        
@@ -69,6 +75,7 @@ public class Thief : MonoBehaviour
     {
         if (currentThiefClicks <= thiefMaxNum)
         {
+            T_o.Play();
             Debug.Log("µµµÏ ¹æ¾î ½ÇÆÐ!");
             Debug.Log("ÈÉÃÄ°£µ· = " + Coin.instance.coin / coin_m);
             Coin.instance.coin -= Coin.instance.coin / coin_m;
@@ -79,6 +86,7 @@ public class Thief : MonoBehaviour
     {
         if (isThiefActive)
         {
+            T_c.Play();
             currentThiefClicks++;
             Debug.Log("Å¬¸¯ ¼ö = " + currentThiefClicks);
 

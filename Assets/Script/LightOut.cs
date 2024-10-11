@@ -12,6 +12,10 @@ public class LightOut : MonoBehaviour
     [SerializeField] private float LightOutActiveDuration;
     [SerializeField] private bool isLightOutActive;
 
+    [SerializeField] private AudioSource L_s;
+    [SerializeField] private AudioSource L_o;
+    [SerializeField] private AudioSource L_w;
+
     [SerializeField] private Animation L_Anim;
     void Start()
     {
@@ -39,7 +43,7 @@ public class LightOut : MonoBehaviour
                     yield return null;
                 }
             }
-
+            L_o.Play();
             isLightOutActive = false;
             L_out0bj.SetActive(false);
             L_Warning.SetActive(false);
@@ -50,12 +54,14 @@ public class LightOut : MonoBehaviour
     }
     void SpawnLightOut()
     {
+        L_s.Play();
         L_out0bj.SetActive(true);
         QuestM.instance.order.GetComponent<Image>().color = Color.gray;
         Debug.Log("소등");
     }
     void LightOutWarning()
     {
+        L_w.Play();
         L_Warning.SetActive(true);
         Debug.Log("소등경고");
         L_Anim.Play();

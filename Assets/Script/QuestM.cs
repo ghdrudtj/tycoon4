@@ -12,6 +12,7 @@ public class QuestM : MonoBehaviour
 
     private bool isClear;
     public GameObject QBtn;
+    public GameObject Cbtn;
 
     public UnityEngine.UI.Image order;
     public GameObject d0;
@@ -47,6 +48,9 @@ public class QuestM : MonoBehaviour
     [SerializeField] private int coin_m;
     public int clearNum;
 
+    [SerializeField] private AudioSource Q_s;
+    [SerializeField] private AudioSource C_s;
+    [SerializeField] private AudioSource F_s;
     public void lnit()
     {
         instance = this;
@@ -54,12 +58,14 @@ public class QuestM : MonoBehaviour
     public void Start()
     {
         d0.SetActive(false);
+        Cbtn.SetActive(false);
         timer = false;
-        GameManager.instance.OrderclaerNum2 = 0;
     }
     public void Quest()
     {
+        Q_s.Play();
         d0.SetActive(true);
+        Cbtn.SetActive(true);
         
         timerCoroutine = StartCoroutine(TimerCoroutine());
         
@@ -114,11 +120,13 @@ public class QuestM : MonoBehaviour
         if (QNum == 0)
         {
             d0.SetActive(false);
+            Cbtn.SetActive(false);
         }
         QBtn.SetActive(false);
     }
     public void Clear()
     {
+        C_s.Play();
         StopCoroutine(timerCoroutine);
 
         if (QNum == Num)
@@ -126,6 +134,7 @@ public class QuestM : MonoBehaviour
             Debug.Log("클리어");
             DollMakerManager.instance.Doll0();
             d0.SetActive(false);
+            Cbtn.SetActive(false);
             if (Num > 4)
             {
                 Coin.instance.coin += 10;
@@ -149,24 +158,23 @@ public class QuestM : MonoBehaviour
         }
         else if (QNum != Num)
         {
+            F_s.Play();
             Debug.Log("no");
             DollMakerManager.instance.Doll0();
             d0.SetActive(false);
+            Cbtn.SetActive(false);
             Coin.instance.coin -= coin_m;
             if (SceneManager.GetActiveScene().name == "Stage1Scene")
             {
                 GameManager.instance.OrderfailNum1++;
-                Debug.Log("주문서 실패 횟수 = " + GameManager.instance.OrderfailNum1);
             }
             if (SceneManager.GetActiveScene().name == "Stage2Scene")
             {
                 GameManager.instance.OrderfailNum2++;
-                Debug.Log("주문서 실패 횟수 = " + GameManager.instance.OrderfailNum2);
             }
             if (SceneManager.GetActiveScene().name == "Stage3Scene")
             {
                 GameManager.instance.OrderfailNum3++;
-                Debug.Log("주문서 실패 횟수 = " + GameManager.instance.OrderfailNum3);
             }
         }
         QBtn.SetActive(true);
@@ -185,29 +193,26 @@ public class QuestM : MonoBehaviour
             Timer.instance.OnTimerChange(currentTimer, maxTimer);
             yield return null;
         }
+        F_s.Play();
         GameManager.instance.OrderfailNum1++;
-        Debug.Log("주문서 실패 횟수 = " + GameManager.instance.OrderfailNum1);
-        Debug.Log("타이머 끝");
         QNum = 0;
         d0.SetActive(false);
+        Cbtn.SetActive(false);
         QBtn.SetActive(true);
         timer = false;
         if (SceneManager.GetActiveScene().name == "Stage1Scene")
         {
             GameManager.instance.OrderfailNum1++;
-            Debug.Log("주문서 실패 횟수 = " + GameManager.instance.OrderfailNum1);
             Coin.instance.coin -= 30;
         }
         if (SceneManager.GetActiveScene().name == "Stage2Scene")
         {
             GameManager.instance.OrderclaerNum2++;
-            Debug.Log("주문서 실패 횟수 = " + GameManager.instance.OrderfailNum2);
             Coin.instance.coin -= 30;
         }
         if (SceneManager.GetActiveScene().name == "Stage3Scene")
         {
             GameManager.instance.OrderclaerNum3++;
-            Debug.Log("주문서 실패 횟수 = " + GameManager.instance.OrderfailNum3);
             Coin.instance.coin -= 60;
         }
     }
