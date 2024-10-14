@@ -8089,7 +8089,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1503951628
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9122,6 +9122,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thiefObj: {fileID: 1974124641}
+  thiefclickObj: {fileID: 1503951627}
   thiefMaxNum: 10
   spawnInterval: 10
   thiefActiveDuration: 5
@@ -9142,6 +9143,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spiderObj: {fileID: 1003795202}
+  spiderclickObj: {fileID: 2084875754}
   spiderMaxNum: 20
   spawnInterval: 30
   spiderActiveDuration: 5
@@ -11109,7 +11111,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2084875755
 RectTransform:
   m_ObjectHideFlags: 0

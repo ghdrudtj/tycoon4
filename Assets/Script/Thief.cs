@@ -5,6 +5,8 @@ public class Thief : MonoBehaviour
 {
     public static Thief thief;
     public GameObject thiefObj;
+    [SerializeField] private GameObject thiefclickObj;
+
     [SerializeField] private int thiefMaxNum = 10; // 도둑의 최대 클릭 수
     [SerializeField] private float spawnInterval = 5;  // 도둑 소환 간격
     [SerializeField] private float thiefActiveDuration = 5f; // 도둑 활성화 시간
@@ -58,6 +60,7 @@ public class Thief : MonoBehaviour
     void SpawnThief()
     {
         thiefObj.SetActive(true);
+        thiefclickObj.SetActive(true);
         currentThiefClicks = 0; // 클릭 수 초기화
         Debug.Log("도둑 소환!");
     }
@@ -68,7 +71,7 @@ public class Thief : MonoBehaviour
             T_o.Play();
             Debug.Log("도둑 방어 성공!");
         }
-       
+        thiefclickObj.SetActive(false);
         thiefObj.SetActive(false);
     }
     void OverThief()
@@ -80,6 +83,7 @@ public class Thief : MonoBehaviour
             Debug.Log("훔쳐간돈 = " + Coin.instance.coin / coin_m);
             Coin.instance.coin -= Coin.instance.coin / coin_m;
         }
+        thiefclickObj.SetActive(false);
         thiefObj.SetActive(false);
     }
     public void ThiefClick()

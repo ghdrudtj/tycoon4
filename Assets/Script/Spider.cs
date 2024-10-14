@@ -5,6 +5,8 @@ public class Spider : MonoBehaviour
 {
     public static Spider spider;
     public GameObject spiderObj;
+    [SerializeField] private GameObject spiderclickObj;
+
     [SerializeField] private int spiderMaxNum = 20; // 거미의 최대 클릭 수
     [SerializeField] private float spawnInterval = 30;  // 거미 소환 간격
     [SerializeField] private float spiderActiveDuration = 5f; // 거미 활성화 시간
@@ -62,6 +64,7 @@ public class Spider : MonoBehaviour
     {
         S_s.Play();
         spiderObj.SetActive(true);
+        spiderclickObj.SetActive(true);
         animator.SetInteger("S_int", 1);
         currentspiderClicks = 0; // 클릭 수 초기화
         Debug.Log("거미 소환!");
@@ -73,6 +76,7 @@ public class Spider : MonoBehaviour
             S_o.Play();
             Debug.Log("거미 방어 성공!");
         }
+        spiderclickObj.SetActive(false);
         spiderObj.SetActive(false);
     }
     void Overspider()
@@ -83,6 +87,7 @@ public class Spider : MonoBehaviour
             Debug.Log("거미 방어 실패!");
             DollMakerManager.instance.Doll0();
         }
+        spiderclickObj.SetActive(false);
         spiderObj.SetActive(false);
     }
     void spiderClick()
