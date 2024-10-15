@@ -8,6 +8,7 @@ using UnityEngine.UIElements;
 public class Trophy : MonoBehaviour
 {
     public static Trophy instance;
+    [SerializeField] private GameObject TrophyCanvas;
     [SerializeField] private GameObject TrophyUI;
 
     [SerializeField] private GameObject Trophy_E;
@@ -32,6 +33,7 @@ public class Trophy : MonoBehaviour
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
+            DontDestroyOnLoad(TrophyCanvas);
         }
         else if (instance != this)
         {

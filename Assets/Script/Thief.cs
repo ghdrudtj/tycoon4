@@ -46,6 +46,7 @@ public class Thief : MonoBehaviour
                 }
             }
             // 다음 도둑 소환을 위한 대기
+            OverThief();
             isThiefActive = false;
         }
     }

@@ -7,7 +7,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Coin coin;
     [SerializeField] private DollMakerManager dollMakerManager;
     [SerializeField] private QuestM QuestM;
-    [SerializeField] private Unlock Unlock;
 
     public int OrderclaerNum1;
     public int OrderfailNum1;
@@ -32,7 +31,6 @@ public class GameManager : MonoBehaviour
         coin.lnit();
         QuestM.lnit();
         dollMakerManager.lnit();
-        Unlock.lnit();
     }
     void Update()
     {

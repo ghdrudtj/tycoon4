@@ -45,6 +45,7 @@ public class Spider : MonoBehaviour
                     yield return null;
                 }
             }
+            Overspider();
             animator.SetInteger("S_int", 2);
             // 다음 거미 소환을 위한 대기
             isspiderActive = false;

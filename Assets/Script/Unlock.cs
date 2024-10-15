@@ -4,6 +4,8 @@ using UnityEngine.SceneManagement;
 public class Unlock : MonoBehaviour
 {
     public static Unlock instance;
+    [SerializeField] private GameObject Unlooks;
+    [SerializeField] private GameObject S;
 
     public GameObject Unlock1obj;
     public GameObject Unlock2obj;
@@ -17,16 +19,15 @@ public class Unlock : MonoBehaviour
 
     [SerializeField] private AudioSource U_s;
 
-    private void Start()
-    {
-
-    }
-    public void lnit()
+    
+    public void Awake()
     {
         if (instance == null)
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
+            DontDestroyOnLoad(Unlooks);
+            DontDestroyOnLoad(S);
         }
         else if (instance != this)
         {
@@ -95,38 +96,15 @@ public class Unlock : MonoBehaviour
     }
     private void Update()
     {
-        if (Unlock_1 == true)
+        if(SceneManager.GetActiveScene().name == "EndingScene"|| SceneManager.GetActiveScene().name == "OverScene" || SceneManager.GetActiveScene().name == "StartScene")
         {
-            if (SceneManager.GetActiveScene().name == "Stage2Scene" || SceneManager.GetActiveScene().name == "Stage3Scene")
-            {
-                Unlock_1 = true;
-                Unlock1obj.SetActive(false);
-            }
+            Unlooks.SetActive(false);
         }
-        if (Unlock_2 == true)
+        else
         {
-            if (SceneManager.GetActiveScene().name == "Stage2Scene" || SceneManager.GetActiveScene().name == "Stage3Scene")
-            {
-                Unlock_2 = true;
-                Unlock2obj.SetActive(false);
-            }
+            Unlooks.SetActive(true);
         }
-        if (Unlock_3 == true)
-        {
-            if (SceneManager.GetActiveScene().name == "Stage2Scene" || SceneManager.GetActiveScene().name == "Stage3Scene")
-            {
-                Unlock_3 = true;
-                Unlock3obj.SetActive(false);
-            }
-        }
-        if (Unlock_4 == true)
-        {
-            if (SceneManager.GetActiveScene().name == "Stage2Scene" || SceneManager.GetActiveScene().name == "Stage3Scene")
-            {
-                Unlock_4 = true;
-                Unlock4obj.SetActive(false);
-            }
-        }
+        
     }
     
 }
