@@ -31,7 +31,7 @@ public class LightOut : MonoBehaviour
             if (!isLightOutActive)
             {
                 LightOutWarning();
-                Invoke("SpawnLightOut", 0.5f);
+                Invoke("SpawnLightOut", 1.0f);
                 isLightOutActive = true;
                 SpawnLightOut();
                 Debug.Log("소등 진행 시간 = " + LightOutActiveDuration);

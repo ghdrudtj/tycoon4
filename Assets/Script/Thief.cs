@@ -74,12 +74,11 @@ public class Thief : MonoBehaviour
     }
     void OverThief()
     {
-        if (currentThiefClicks < thiefMaxNum)
-        {
+        
             Debug.Log("µµµÏ ¹æ¾î ½ÇÆÐ!");
             Debug.Log("ÈÉÃÄ°£µ· = " + Coin.instance.coin / coin_m);
             Coin.instance.coin -= Coin.instance.coin / coin_m;
-        }
+        
         T_o.Play();
         thiefObj.SetActive(false);
         thiefclickObj.SetActive(false);

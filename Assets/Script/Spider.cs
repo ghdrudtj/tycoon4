@@ -67,23 +67,21 @@ public class Spider : MonoBehaviour
     }
     void Evaluatespider()
     {
-        if (currentspiderClicks >= spiderMaxNum)
-        {
+        
             S_o.Play();
             Debug.Log("거미 방어 성공!");
-        }
+        
         Trophy.instance.DisturbanceNum += 1;
         spiderclickObj.SetActive(false);
         spiderObj.SetActive(false);
     }
     void Overspider()
     {
-        if (currentspiderClicks < spiderMaxNum)
-        {
+        
             S_o.Play();
             Debug.Log("거미 방어 실패!");
             DollMakerManager.instance.Doll0();
-        }
+        
         spiderclickObj.SetActive(false);
         spiderObj.SetActive(false);
     }
