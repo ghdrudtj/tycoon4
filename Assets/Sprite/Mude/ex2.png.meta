@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b1240151da708384e9538dbc0ff7ef63
+guid: c27d86add13a42849bdce7e834430b96
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -121,133 +121,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: challenge_0
-      rect:
-        serializedVersion: 2
-        x: 56
-        y: 169
-        width: 321
-        height: 639
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1687ca5520ee8dd49bb7a6eec44ab7d0
-      internalID: 1339669918
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: challenge_1
-      rect:
-        serializedVersion: 2
-        x: 1550
-        y: 173
-        width: 321
-        height: 602
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9e9dd90358e25874abe3219195cb6d46
-      internalID: -1505758853
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: challenge_2
-      rect:
-        serializedVersion: 2
-        x: 1581
-        y: 707
-        width: 44
-        height: 66
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b34f0dc108acbfd40bff991a8d4ad042
-      internalID: 619344319
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: challenge_3
-      rect:
-        serializedVersion: 2
-        x: 448
-        y: 172
-        width: 344
-        height: 515
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e4d87e07ae895e74e9a8d4e30ab7165b
-      internalID: 1485714154
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: challenge_4
-      rect:
-        serializedVersion: 2
-        x: 827
-        y: 172
-        width: 321
-        height: 479
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2803740510b450d43ba4a58f3759b7f5
-      internalID: -1860958065
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: challenge_5
-      rect:
-        serializedVersion: 2
-        x: 1200
-        y: 172
-        width: 321
-        height: 481
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d93050b76e04b2f4aad7d5d4099fb30a
-      internalID: -252104459
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -258,13 +132,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      challenge_0: 1339669918
-      challenge_1: -1505758853
-      challenge_2: 619344319
-      challenge_3: 1485714154
-      challenge_4: -1860958065
-      challenge_5: -252104459
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
