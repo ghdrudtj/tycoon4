@@ -10784,7 +10784,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   L_out0bj: {fileID: 81050659}
   L_Warning: {fileID: 192968437}
-  spawnInterval: 60
+  spawnInterval: 1
   LightOutActiveDuration: 10
   isLightOutActive: 0
   L_s: {fileID: 2031853173}
