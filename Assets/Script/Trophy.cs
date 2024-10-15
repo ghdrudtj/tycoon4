@@ -23,7 +23,11 @@ public class Trophy : MonoBehaviour
     [SerializeField] private GameObject Trophy_D_T;
     [SerializeField] private GameObject Trophy_C_T;
 
-    private float TrophyCount = 1f;
+    private float TrophyCount_E = 1.5f;
+    private float TrophyCount_P = 1.5f;
+    private float TrophyCount_S1 = 1.5f;
+    private float TrophyCount_D = 1.5f;
+    private float TrophyCount_C = 1.5f;
 
     public int DisturbanceNum;
 
@@ -45,15 +49,15 @@ public class Trophy : MonoBehaviour
     {
         TrophyUI.SetActive(!TrophyUI.activeSelf);
     }
-    public void TrophyText()
+    public void trophy()
     {
         if(SceneManager.GetActiveScene().name == "EndingScene")
         {
             Trophy_E_T.SetActive(true);
             Trophy_E.SetActive(true);
 
-            TrophyCount -= Time.deltaTime;
-            if (TrophyCount <= 0)
+            TrophyCount_E -= Time.deltaTime;
+            if (TrophyCount_E <= 0)
             {
                 Trophy_E_T.SetActive(false);
             }
@@ -63,8 +67,8 @@ public class Trophy : MonoBehaviour
             Trophy_P_T.SetActive(true);
             Trophy_P.SetActive(true);
 
-            TrophyCount -= Time.deltaTime;
-            if (TrophyCount <= 0)
+            TrophyCount_P -= Time.deltaTime;
+            if (TrophyCount_P <= 0)
             {
                 Trophy_P_T.SetActive(false);
             }
@@ -74,8 +78,8 @@ public class Trophy : MonoBehaviour
             Trophy_S1_T.SetActive(true);
             Trophy_S1.SetActive(true);
 
-            TrophyCount -= Time.deltaTime;
-            if (TrophyCount <= 0)
+            TrophyCount_S1 -= Time.deltaTime;
+            if (TrophyCount_S1 <= 0)
             {
                 Trophy_S1_T.SetActive(false);
             }
@@ -85,8 +89,8 @@ public class Trophy : MonoBehaviour
             Trophy_D_T.SetActive(true);
             Trophy_D.SetActive(true);
 
-            TrophyCount -= Time.deltaTime;
-            if (TrophyCount <= 0)
+            TrophyCount_D -= Time.deltaTime;
+            if (TrophyCount_D <= 0)
             {
                 Trophy_D_T.SetActive(false);
             }
@@ -96,8 +100,8 @@ public class Trophy : MonoBehaviour
             Trophy_C_T.SetActive(true);
             Trophy_C.SetActive(true);
 
-            TrophyCount -= Time.deltaTime;
-            if (TrophyCount <= 0)
+            TrophyCount_C -= Time.deltaTime;
+            if (TrophyCount_C <= 0)
             {
                 Trophy_C_T.SetActive(false);
             }
@@ -105,11 +109,10 @@ public class Trophy : MonoBehaviour
     }
     void Start()
     {
-        
     }
 
     void Update()
     {
-        TrophyText();
+        trophy();
     }
 }
