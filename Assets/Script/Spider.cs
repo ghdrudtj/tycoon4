@@ -45,8 +45,11 @@ public class Spider : MonoBehaviour
                     yield return null;
                 }
             }
-            Overspider();
-            animator.SetInteger("S_int", 2);
+            if (currentspiderClicks < spiderMaxNum)
+            {
+                Overspider();
+            }
+                animator.SetInteger("S_int", 2);
             // 다음 거미 소환을 위한 대기
             isspiderActive = false;
             spawnInterval = Random.Range(30, 41);
@@ -75,7 +78,7 @@ public class Spider : MonoBehaviour
     }
     void Overspider()
     {
-        if (currentspiderClicks <= spiderMaxNum)
+        if (currentspiderClicks < spiderMaxNum)
         {
             S_o.Play();
             Debug.Log("거미 방어 실패!");

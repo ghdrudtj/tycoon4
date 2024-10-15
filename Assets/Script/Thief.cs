@@ -45,8 +45,13 @@ public class Thief : MonoBehaviour
                     yield return null;
                 }
             }
+            if (currentThiefClicks < thiefMaxNum)
+            {
+                OverThief();
+            }
+            
+            Thiefover= false;  
             // 다음 도둑 소환을 위한 대기
-            OverThief();
             isThiefActive = false;
         }
     }
@@ -59,18 +64,17 @@ public class Thief : MonoBehaviour
     }
     void EvaluateThief()
     {
-        if (currentThiefClicks >= thiefMaxNum)
-        {
+        
             T_o.Play();
             Debug.Log("도둑 방어 성공!");
-        }
+        
         Trophy.instance.DisturbanceNum += 1;
         thiefObj.SetActive(false);
         thiefclickObj.SetActive(false);
     }
     void OverThief()
     {
-        if (currentThiefClicks <= thiefMaxNum)
+        if (currentThiefClicks < thiefMaxNum)
         {
             Debug.Log("도둑 방어 실패!");
             Debug.Log("훔쳐간돈 = " + Coin.instance.coin / coin_m);
