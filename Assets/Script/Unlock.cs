@@ -32,6 +32,8 @@ public class Unlock : MonoBehaviour
         else if (instance != this)
         {
             Destroy(gameObject);
+            Destroy(S);
+            Destroy(Unlooks);    
         }
     }
     public void Unlock1()

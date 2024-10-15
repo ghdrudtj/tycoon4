@@ -38,6 +38,7 @@ public class Trophy : MonoBehaviour
         else if (instance != this)
         {
             Destroy(gameObject);
+            Destroy(TrophyCanvas);
         }
     }
     public void TrophyImg()
@@ -109,6 +110,6 @@ public class Trophy : MonoBehaviour
 
     void Update()
     {
-        
+        TrophyText();
     }
 }
