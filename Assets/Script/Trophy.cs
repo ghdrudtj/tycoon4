@@ -69,7 +69,7 @@ public class Trophy : MonoBehaviour
                 Trophy_P_T.SetActive(false);
             }
         }
-        if(GameManager.instance.OrderclaerNum1 >= 15)
+        if(GameManager.instance.OrderclearNum1 >= 15)
         {
             Trophy_S1_T.SetActive(true);
             Trophy_S1.SetActive(true);

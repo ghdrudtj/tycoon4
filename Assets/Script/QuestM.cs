@@ -142,18 +142,18 @@ public class QuestM : MonoBehaviour
             Coin.instance.coin += 30;
             if(SceneManager.GetActiveScene().name == "Stage1Scene")
             {
-                GameManager.instance.OrderclaerNum1++;
-                Debug.Log("주문서 성공 횟수 = " + GameManager.instance.OrderclaerNum1);
+                GameManager.instance.OrderclearNum1++;
+                Debug.Log("주문서 성공 횟수 = " + GameManager.instance.OrderclearNum1);
             }
             if (SceneManager.GetActiveScene().name == "Stage2Scene")
             {
-                GameManager.instance.OrderclaerNum2++;
-                Debug.Log("주문서 성공 횟수 = " + GameManager.instance.OrderclaerNum2);
+                GameManager.instance.OrderclearNum2++;
+                Debug.Log("주문서 성공 횟수 = " + GameManager.instance.OrderclearNum2);
             }
             if (SceneManager.GetActiveScene().name == "Stage3Scene")
             {
-                GameManager.instance.OrderclaerNum3++;
-                Debug.Log("주문서 성공 횟수 = " + GameManager.instance.OrderclaerNum3);
+                GameManager.instance.OrderclearNum3++;
+                Debug.Log("주문서 성공 횟수 = " + GameManager.instance.OrderclearNum3);
             }
         }
         else if (QNum != Num)
@@ -207,12 +207,12 @@ public class QuestM : MonoBehaviour
         }
         if (SceneManager.GetActiveScene().name == "Stage2Scene")
         {
-            GameManager.instance.OrderclaerNum2++;
+            GameManager.instance.OrderclearNum2++;
             Coin.instance.coin -= 30;
         }
         if (SceneManager.GetActiveScene().name == "Stage3Scene")
         {
-            GameManager.instance.OrderclaerNum3++;
+            GameManager.instance.OrderclearNum3++;
             Coin.instance.coin -= 60;
         }
     }

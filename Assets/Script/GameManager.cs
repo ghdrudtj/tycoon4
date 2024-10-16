@@ -8,11 +8,11 @@ public class GameManager : MonoBehaviour
     [SerializeField] private DollMakerManager dollMakerManager;
     [SerializeField] private QuestM QuestM;
 
-    public int OrderclaerNum1;
+    public int OrderclearNum1;
     public int OrderfailNum1;
-    public int OrderclaerNum2;
+    public int OrderclearNum2;
     public int OrderfailNum2;
-    public int OrderclaerNum3;
+    public int OrderclearNum3;
     public int OrderfailNum3;
 
     [SerializeField] public GameObject ClaerText;
@@ -44,7 +44,7 @@ public class GameManager : MonoBehaviour
                  SceneManager.LoadScene("OverScene");
             }
         }
-       if (OrderclaerNum1 >= 15)
+       if (OrderclearNum1 >= 15)
         {
             C_s.Play();
             ClaerText.SetActive(true);
@@ -54,7 +54,7 @@ public class GameManager : MonoBehaviour
                 SceneManager.LoadScene("Stage2Scene");
             }
         }
-       if(OrderclaerNum2 >= 25)
+       if(OrderclearNum2 >= 25)
         {
             C_s.Play();
             ClaerText.SetActive(true);
@@ -64,7 +64,7 @@ public class GameManager : MonoBehaviour
                 SceneManager.LoadScene("Stage3Scene");
             }
         }
-        if (OrderclaerNum3 >= 35)
+        if (OrderclearNum3 >= 35)
         {
             C_s.Play();
             ClaerText.SetActive(true);
