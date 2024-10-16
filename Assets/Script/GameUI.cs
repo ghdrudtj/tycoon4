@@ -14,6 +14,7 @@ public class GameUI : MonoBehaviour
     {
         instance = this;
     }
+   
     private void Menu()
     {
         if (Input.GetKeyDown(KeyCode.Escape)) 
