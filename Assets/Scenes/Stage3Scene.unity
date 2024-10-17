@@ -2827,7 +2827,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -6500,7 +6500,7 @@ MonoBehaviour:
   d19: {fileID: 21300000, guid: add309a0a882a2949b32fab9380908b6, type: 3}
   d20: {fileID: 21300000, guid: 10a98aa3f8f6b254083c6547ad21514c, type: 3}
   maxTimer: 10
-  coin_m: 30
+  coin_m: 60
   clearNum: 0
   Q_s: {fileID: 988380023}
   C_s: {fileID: 1497982413}
@@ -9203,6 +9203,7 @@ MonoBehaviour:
   T_s: {fileID: 1421419039}
   T_o: {fileID: 344710848}
   T_c: {fileID: 2054712034}
+  animator: {fileID: 1974124644}
 --- !u!114 &1637640911
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9223,7 +9224,7 @@ MonoBehaviour:
   S_s: {fileID: 1370482700}
   S_o: {fileID: 636420101}
   S_c: {fileID: 2051185654}
-  animator: {fileID: 0}
+  animator: {fileID: 1003795207}
 --- !u!114 &1637640912
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10291,6 +10292,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1974124642}
   - component: {fileID: 1974124643}
+  - component: {fileID: 1974124644}
   m_Layer: 0
   m_Name: Thief
   m_TagString: Untagged
@@ -10307,7 +10309,7 @@ Transform:
   m_GameObject: {fileID: 1974124641}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.38, y: 2.75, z: 9.943524}
+  m_LocalPosition: {x: -10.82, y: 2.75, z: 9.943524}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10365,6 +10367,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1974124644
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1974124641}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 63fc84907d068dd48b2e8890bfaba0d6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1991103585
 GameObject:
   m_ObjectHideFlags: 0
