@@ -34,13 +34,13 @@ public class Spider : MonoBehaviour
             {
                 // 거미 소환
                 Spawnspider();
+                animator.SetTrigger("S_act");
                 isspiderActive = true;
 
                 // 거미가 활성화되는 동안 대기
                 float currentTime = 0f;
                 while (currentTime < spiderActiveDuration)
                 {
-                    animator.SetInteger("S_int", 0);
                     currentTime += Time.deltaTime;
                     yield return null;
                 }
@@ -49,7 +49,6 @@ public class Spider : MonoBehaviour
             {
                 Overspider();
             }
-                animator.SetInteger("S_int", 2);
             // 다음 거미 소환을 위한 대기
             isspiderActive = false;
             spawnInterval = Random.Range(30, 41);
@@ -61,7 +60,6 @@ public class Spider : MonoBehaviour
         S_s.Play();
         spiderObj.SetActive(true);
         spiderclickObj.SetActive(true);
-        animator.SetInteger("S_int", 1);
         currentspiderClicks = 0; // 클릭 수 초기화
         Debug.Log("거미 소환!");
     }
@@ -69,19 +67,19 @@ public class Spider : MonoBehaviour
     {
         S_o.Play();
         Debug.Log("거미 방어 성공!");
-        
-        Trophy.instance.DisturbanceNum += 1;
+        animator.SetTrigger("S_out_c");
         spiderclickObj.SetActive(false);
-        spiderObj.SetActive(false);
+        Invoke("S_out", 0.51f);
+        Trophy.instance.DisturbanceNum += 1;
     }
     void Overspider()
     {
         S_o.Play();
         Debug.Log("거미 방어 실패!");
-        DollMakerManager.instance.Doll0();
-        
+        animator.SetTrigger("S_out_f");
         spiderclickObj.SetActive(false);
-        spiderObj.SetActive(false);
+        Invoke("S_out", 0.51f);
+        DollMakerManager.instance.Doll0();
     }
     void spiderClick()
     {
@@ -103,5 +101,9 @@ public class Spider : MonoBehaviour
     void spiderColor()
     {
         spiderObj.GetComponent<SpriteRenderer>().color = Color.white;
+    }
+    void S_out()
+    {
+        spiderObj.SetActive(false);
     }
 }

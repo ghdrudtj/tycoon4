@@ -20,13 +20,11 @@ public class Thief : MonoBehaviour
     [SerializeField] private AudioSource T_o;
     [SerializeField] private AudioSource T_c;
 
-    private bool Thiefclear;
-    private bool Thiefover;
-
-    public float Count = 1.5f;
+    public Animator animator;
     void Start()
     {
         StartCoroutine(ThiefSpawnRoutine());
+        animator = thiefObj.GetComponent<Animator>();
     }
     IEnumerator ThiefSpawnRoutine()
     {
@@ -37,7 +35,8 @@ public class Thief : MonoBehaviour
             {
                 // 도둑 소환
                 T_s.Play();
-                SpawnThief();
+                SpawnThief(); 
+                animator.SetTrigger("T_act");
                 isThiefActive = true;
 
                 // 도둑이 활성화되는 동안 대기
@@ -53,7 +52,6 @@ public class Thief : MonoBehaviour
                 OverThief();
             }
             
-            Thiefover= false;  
             // 다음 도둑 소환을 위한 대기
             isThiefActive = false;
         }
@@ -71,8 +69,9 @@ public class Thief : MonoBehaviour
         Debug.Log("도둑 방어 성공!");
         
         Trophy.instance.DisturbanceNum += 1;
-        thiefObj.SetActive(false);
+        animator.SetTrigger("T_out_c");
         thiefclickObj.SetActive(false);
+        Invoke("T_out", 0.51f);
     }
     void OverThief()
     {
@@ -81,8 +80,9 @@ public class Thief : MonoBehaviour
         Coin.instance.coin -= Coin.instance.coin / coin_m;
         
         T_o.Play();
-        thiefObj.SetActive(false);
+        animator.SetTrigger("T_out_f");
         thiefclickObj.SetActive(false);
+        Invoke("T_out", 0.51f);
     }
     public void ThiefClick()
     {
@@ -106,7 +106,8 @@ public class Thief : MonoBehaviour
     {
         thiefObj.GetComponent<SpriteRenderer>().color = Color.white;
     }
-    private void Update()
+    void T_out()
     {
+        thiefObj.SetActive(false);
     }
 }

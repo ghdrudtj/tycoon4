@@ -47,7 +47,7 @@ public class LightOut : MonoBehaviour
             L_out0bj.SetActive(false);
             L_Warning.SetActive(false);
             QuestM.instance.order.GetComponent<Image>().color = Color.white;
-            spawnInterval = Random.Range(50, 61);
+            spawnInterval = Random.Range(60, 71);
             Debug.Log("다음 소등 시간 = " + spawnInterval);
         }
     }

@@ -1589,11 +1589,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8310509472751028047, guid: f36c2d77dec2bb94a84de56d9eb92ea5, type: 3}
   m_PrefabInstance: {fileID: 7438046368356451179}
   m_PrefabAsset: {fileID: 0}
---- !u!111 &192968439 stripped
-Animation:
-  m_CorrespondingSourceObject: {fileID: 4781633393133110087, guid: f36c2d77dec2bb94a84de56d9eb92ea5, type: 3}
-  m_PrefabInstance: {fileID: 7438046368356451179}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &224555155
 GameObject:
   m_ObjectHideFlags: 0
@@ -11530,12 +11525,13 @@ MonoBehaviour:
   thiefObj: {fileID: 1974124641}
   thiefclickObj: {fileID: 1503951627}
   thiefMaxNum: 10
-  spawnInterval: 10
+  spawnInterval: 5
   thiefActiveDuration: 5
   coin_m: 10
   T_s: {fileID: 1711596355}
   T_o: {fileID: 1223462804}
   T_c: {fileID: 1713939089}
+  animator: {fileID: 0}
 --- !u!114 &1637640911
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11556,7 +11552,7 @@ MonoBehaviour:
   S_s: {fileID: 1026007420}
   S_o: {fileID: 1783750115}
   S_c: {fileID: 1335635680}
-  animator: {fileID: 0}
+  animator: {fileID: 1003795207}
 --- !u!114 &1637640912
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11571,13 +11567,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   L_out0bj: {fileID: 81050659}
   L_Warning: {fileID: 192968437}
-  spawnInterval: 60
+  spawnInterval: 2
   LightOutActiveDuration: 10
   isLightOutActive: 0
   L_s: {fileID: 2031853173}
   L_o: {fileID: 1701469875}
   L_w: {fileID: 1588961162}
-  L_Anim: {fileID: 192968439}
+  L_Anim: {fileID: 0}
 --- !u!114 &1637640913
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13485,6 +13481,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1974124642}
   - component: {fileID: 1974124643}
+  - component: {fileID: 1974124644}
   m_Layer: 0
   m_Name: Thief
   m_TagString: Untagged
@@ -13501,7 +13498,7 @@ Transform:
   m_GameObject: {fileID: 1974124641}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.38, y: 2.75, z: 9.943524}
+  m_LocalPosition: {x: -10.89, y: 2.75, z: 9.943524}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13559,6 +13556,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1974124644
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1974124641}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 63fc84907d068dd48b2e8890bfaba0d6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1984886603
 GameObject:
   m_ObjectHideFlags: 0
@@ -14893,6 +14911,10 @@ PrefabInstance:
     - target: {fileID: 4023580058726508294, guid: f36c2d77dec2bb94a84de56d9eb92ea5, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4781633393133110087, guid: f36c2d77dec2bb94a84de56d9eb92ea5, type: 3}
+      propertyPath: m_PlayAutomatically
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8310509472751028047, guid: f36c2d77dec2bb94a84de56d9eb92ea5, type: 3}
       propertyPath: m_LocalPosition.x
