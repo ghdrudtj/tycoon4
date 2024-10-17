@@ -30,7 +30,7 @@ public class Spider : MonoBehaviour
         while (true) // 계속 반복하여 거미를 일정 간격으로 소환
         {
             yield return new WaitForSecondsRealtime(spawnInterval);
-            if (!isspiderActive)
+            if (!isspiderActive || GameUI.instance.GameActive)
             {
                 // 거미 소환
                 Spawnspider();
@@ -67,9 +67,8 @@ public class Spider : MonoBehaviour
     }
     void Evaluatespider()
     {
-        
-            S_o.Play();
-            Debug.Log("거미 방어 성공!");
+        S_o.Play();
+        Debug.Log("거미 방어 성공!");
         
         Trophy.instance.DisturbanceNum += 1;
         spiderclickObj.SetActive(false);
@@ -77,10 +76,9 @@ public class Spider : MonoBehaviour
     }
     void Overspider()
     {
-        
-            S_o.Play();
-            Debug.Log("거미 방어 실패!");
-            DollMakerManager.instance.Doll0();
+        S_o.Play();
+        Debug.Log("거미 방어 실패!");
+        DollMakerManager.instance.Doll0();
         
         spiderclickObj.SetActive(false);
         spiderObj.SetActive(false);
@@ -89,14 +87,21 @@ public class Spider : MonoBehaviour
     {
         if (isspiderActive)
         {
+            spiderObj.GetComponent<SpriteRenderer>().color = Color.red;
+            Invoke("spiderColor", 0.1f);
+
+            S_c.Play();
             currentspiderClicks++;
             Debug.Log("클릭 수 = " + currentspiderClicks);
-            S_c.Play();
             // 클릭 수가 목표에 도달하면 거미를 즉시 비활성화
             if (currentspiderClicks >= spiderMaxNum)
             {
                 Evaluatespider();
             }
         }
+    }
+    void spiderColor()
+    {
+        spiderObj.GetComponent<SpriteRenderer>().color = Color.white;
     }
 }

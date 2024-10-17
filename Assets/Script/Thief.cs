@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Thief : MonoBehaviour
 {
@@ -21,6 +22,8 @@ public class Thief : MonoBehaviour
 
     private bool Thiefclear;
     private bool Thiefover;
+
+    public float Count = 1.5f;
     void Start()
     {
         StartCoroutine(ThiefSpawnRoutine());
@@ -30,7 +33,7 @@ public class Thief : MonoBehaviour
         while (true) // 계속 반복하여 도둑을 일정 간격으로 소환
         {
             yield return new WaitForSecondsRealtime(spawnInterval);
-            if (!isThiefActive)
+            if (!isThiefActive || GameUI.instance.GameActive)
             {
                 // 도둑 소환
                 T_s.Play();
@@ -64,9 +67,8 @@ public class Thief : MonoBehaviour
     }
     void EvaluateThief()
     {
-        
-            T_o.Play();
-            Debug.Log("도둑 방어 성공!");
+        T_o.Play();
+        Debug.Log("도둑 방어 성공!");
         
         Trophy.instance.DisturbanceNum += 1;
         thiefObj.SetActive(false);
@@ -74,10 +76,9 @@ public class Thief : MonoBehaviour
     }
     void OverThief()
     {
-        
-            Debug.Log("도둑 방어 실패!");
-            Debug.Log("훔쳐간돈 = " + Coin.instance.coin / coin_m);
-            Coin.instance.coin -= Coin.instance.coin / coin_m;
+        Debug.Log("도둑 방어 실패!");
+        Debug.Log("훔쳐간돈 = " + Coin.instance.coin / coin_m);
+        Coin.instance.coin -= Coin.instance.coin / coin_m;
         
         T_o.Play();
         thiefObj.SetActive(false);
@@ -87,6 +88,9 @@ public class Thief : MonoBehaviour
     {
         if (isThiefActive)
         {
+            thiefObj.GetComponent<SpriteRenderer>().color = Color.red;
+            Invoke("thiefcolor", 0.1f);
+
             T_c.Play();
             currentThiefClicks++;
             Debug.Log("클릭 수 = " + currentThiefClicks);
@@ -97,6 +101,10 @@ public class Thief : MonoBehaviour
                 EvaluateThief();
             }
         }
+    }
+    void thiefcolor()
+    {
+        thiefObj.GetComponent<SpriteRenderer>().color = Color.white;
     }
     private void Update()
     {
