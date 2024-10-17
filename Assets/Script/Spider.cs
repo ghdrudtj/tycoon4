@@ -38,7 +38,7 @@ public class Spider : MonoBehaviour
                 animator.SetTrigger("S_act");
                 isspiderActive = true;
 
-                // 거미가 활성화되는 동안 대기
+                //거미가 활성화되는 동안 대기
                 float currentTime = 0f;
                 while (currentTime < spiderActiveDuration)
                 {
@@ -69,7 +69,7 @@ public class Spider : MonoBehaviour
         Debug.Log("거미 방어 성공!");
         animator.SetTrigger("S_out_c");
         spiderclickObj.SetActive(false);
-        Invoke("S_out", 0.51f);
+        Invoke("S_out", 0.75f);
         Trophy.instance.DisturbanceNum += 1;
     }
     void Overspider()
@@ -78,7 +78,7 @@ public class Spider : MonoBehaviour
         Debug.Log("거미 방어 실패!");
         animator.SetTrigger("S_out_f");
         spiderclickObj.SetActive(false);
-        Invoke("S_out", 0.51f);
+        Invoke("S_out", 0.75f);
         DollMakerManager.instance.Doll0();
     }
     void spiderClick()

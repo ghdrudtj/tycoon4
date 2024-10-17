@@ -71,7 +71,7 @@ public class Thief : MonoBehaviour
         Trophy.instance.DisturbanceNum += 1;
         animator.SetTrigger("T_out_c");
         thiefclickObj.SetActive(false);
-        Invoke("T_out", 0.51f);
+        Invoke("T_out", 0.95f);
     }
     void OverThief()
     {
@@ -82,7 +82,7 @@ public class Thief : MonoBehaviour
         T_o.Play();
         animator.SetTrigger("T_out_f");
         thiefclickObj.SetActive(false);
-        Invoke("T_out", 0.51f);
+        Invoke("T_out", 0.95f);
     }
     public void ThiefClick()
     {
