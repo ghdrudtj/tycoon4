@@ -33,6 +33,7 @@ public class Spider : MonoBehaviour
             if (!isspiderActive || GameUI.instance.GameActive)
             {
                 // 거미 소환
+                S_s.Play();
                 Spawnspider();
                 animator.SetTrigger("S_act");
                 isspiderActive = true;
@@ -57,7 +58,6 @@ public class Spider : MonoBehaviour
     }
     void Spawnspider()
     {
-        S_s.Play();
         spiderObj.SetActive(true);
         spiderclickObj.SetActive(true);
         currentspiderClicks = 0; // 클릭 수 초기화
