@@ -30,7 +30,7 @@ public class Spider : MonoBehaviour
         while (true) // 계속 반복하여 거미를 일정 간격으로 소환
         {
             yield return new WaitForSecondsRealtime(spawnInterval);
-            if (!isspiderActive || GameUI.instance.GameActive)
+            if (!isspiderActive || GameUI.instance.GameStop)
             {
                 // 거미 소환
                 S_s.Play();

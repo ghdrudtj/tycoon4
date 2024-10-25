@@ -32,7 +32,7 @@ public class Thief : MonoBehaviour
         while (true) // 계속 반복하여 도둑을 일정 간격으로 소환
         {
             yield return new WaitForSecondsRealtime(spawnInterval);
-            if (!isThiefActive || GameUI.instance.GameActive)
+            if (!isThiefActive || GameUI.instance.GameStop)
             {
                 // 도둑 소환
                 T_s.Play();

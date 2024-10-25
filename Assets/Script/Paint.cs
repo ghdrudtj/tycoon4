@@ -22,7 +22,7 @@ public class Paint : MonoBehaviour
         while (true) // 계속 반복하여 소등을 일정 간격으로 소환
         {
             yield return new WaitForSecondsRealtime(spawnInterval);
-            if (!isLightOutActive || GameUI.instance.GameActive)
+            if (!isLightOutActive || GameUI.instance.GameStop)
             {
                 SpawnPaint();
                 Invoke("SpawnLightOut", 0.5f);

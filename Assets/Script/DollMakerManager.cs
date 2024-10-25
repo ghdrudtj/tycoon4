@@ -260,6 +260,7 @@ public class DollMakerManager : MonoBehaviour
             Debug.Log("Num = " + Num);
         }
     }
+
     private void Update()
     {
         QNum = QuestM.instance.QNum;

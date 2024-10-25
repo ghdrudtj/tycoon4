@@ -5,10 +5,14 @@ public class GameUI : MonoBehaviour
 {
     public static GameUI instance;  
     public GameObject MenuUI;
-    public bool GameActive =false;
+    public bool GameStop =false;
 
     private void Update()
     {
+        if (SceneManager.GetActiveScene().name == "StartScene")
+        {
+            GameStop = false;
+        }
         Menu();
     }
     public void lnit()
@@ -24,16 +28,16 @@ public class GameUI : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape)) 
         {
             MenuUI.SetActive(!MenuUI.activeSelf);
-            if (GameActive)
+            if (GameStop)
             {
                 Time.timeScale = 1.0f;
-                GameActive = false;
+                GameStop = false;
                 Debug.Log("게임 다시실행");
             }
             else
             {
                 Time.timeScale = 0;
-                GameActive = true;
+                GameStop = true;
                 Debug.Log("게임 일시정지");
             }
         }
