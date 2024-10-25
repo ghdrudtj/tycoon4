@@ -1,10 +1,11 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
 
 public class Thief : MonoBehaviour
 {
-    public static Thief thief;
+    public static Thief instance;
     public GameObject thiefObj;
     [SerializeField] private GameObject thiefclickObj;
 
@@ -78,7 +79,10 @@ public class Thief : MonoBehaviour
         Debug.Log("µµµÏ ¹æ¾î ½ÇÆÐ!");
         Debug.Log("ÈÉÃÄ°£µ· = " + Coin.instance.coin / coin_m);
         Coin.instance.coin -= Coin.instance.coin / coin_m;
-        
+
+        CoinColor_R();
+        Invoke("CoinColor_W", 0.35f);
+
         T_o.Play();
         animator.SetTrigger("T_out_f");
         thiefclickObj.SetActive(false);
@@ -102,6 +106,7 @@ public class Thief : MonoBehaviour
             }
         }
     }
+
     void thiefcolor()
     {
         thiefObj.GetComponent<SpriteRenderer>().color = Color.white;
@@ -109,5 +114,13 @@ public class Thief : MonoBehaviour
     void T_out()
     {
         thiefObj.SetActive(false);
+    }
+    void CoinColor_W()
+    {
+        Coin.instance.CoinColor_W();
+    }
+    void CoinColor_R()
+    {
+        Coin.instance.CoinColor_R();
     }
 }

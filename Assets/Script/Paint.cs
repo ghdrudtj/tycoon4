@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Paint : MonoBehaviour
 {
-    public static Paint paint;
+    public static Paint instance;
     public GameObject paintObj;
 
     [SerializeField] private float spawnInterval;

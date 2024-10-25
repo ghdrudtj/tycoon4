@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameUI : MonoBehaviour
 {
@@ -14,7 +15,10 @@ public class GameUI : MonoBehaviour
     {
         instance = this;
     }
-   
+    private void Start()
+    {
+      
+    }
     private void Menu()
     {
         if (Input.GetKeyDown(KeyCode.Escape)) 

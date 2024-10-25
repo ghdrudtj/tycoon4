@@ -20,5 +20,16 @@ public class Coin : MonoBehaviour
     {
         cointext.text = coin.ToString();
     }
-    
+    public void CoinColor_W()
+    {
+        cointext.GetComponent<Text>().color = Color.black;
+    }
+    public void CoinColor_R()
+    {
+        cointext.GetComponent<Text>().color = Color.red;
+    }
+    public void CoinColor_G()
+    {
+        cointext.GetComponent<Text>().color = Color.green;
+    }
 }

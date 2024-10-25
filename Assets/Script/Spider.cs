@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Spider : MonoBehaviour
 {
-    public static Spider spider;
+    public static Spider instance;
     public GameObject spiderObj;
     [SerializeField] private GameObject spiderclickObj;
 

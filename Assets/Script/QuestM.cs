@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class QuestM : MonoBehaviour
 {
@@ -45,7 +46,7 @@ public class QuestM : MonoBehaviour
     private List<int> Unlock2 = new List<int> { 1, 2, 3, 4, 5, 9, 13, 17, 6, 10, 14, 18 };
     private List<int> Unlock3 = new List<int> { 1, 2, 3, 4, 5, 9, 13, 17, 6, 10, 14, 18, 7, 11, 15, 19 };
 
-    [SerializeField] private int coin_m;
+    public int coin_m;
     public int clearNum;
 
     [SerializeField] private AudioSource Q_s;
@@ -140,7 +141,9 @@ public class QuestM : MonoBehaviour
                 Coin.instance.coin += 10;
             }
             Coin.instance.coin += 30;
-            if(SceneManager.GetActiveScene().name == "Stage1Scene")
+            CoinColor_G();
+            Invoke("CoinColor_W", 0.35f);
+            if (SceneManager.GetActiveScene().name == "Stage1Scene")
             {
                 GameManager.instance.OrderclearNum1++;
                 Debug.Log("주문서 성공 횟수 = " + GameManager.instance.OrderclearNum1);
@@ -164,6 +167,8 @@ public class QuestM : MonoBehaviour
             d0.SetActive(false);
             Cbtn.SetActive(false);
             Coin.instance.coin -= coin_m;
+            CoinColor_R();
+            Invoke("CoinColor_W", 0.35f);
             if (SceneManager.GetActiveScene().name == "Stage1Scene")
             {
                 GameManager.instance.OrderfailNum1++;
@@ -200,6 +205,8 @@ public class QuestM : MonoBehaviour
         Cbtn.SetActive(false);
         QBtn.SetActive(true);
         timer = false;
+        CoinColor_R();
+        Invoke("CoinColor_W", 0.35f);
         if (SceneManager.GetActiveScene().name == "Stage1Scene")
         {
             GameManager.instance.OrderfailNum1++;
@@ -215,5 +222,17 @@ public class QuestM : MonoBehaviour
             GameManager.instance.OrderclearNum3++;
             Coin.instance.coin -= 60;
         }
+    }
+    void CoinColor_W()
+    {
+        Coin.instance.CoinColor_W();
+    }
+    void CoinColor_R()
+    {
+        Coin.instance.CoinColor_R();
+    }
+    void CoinColor_G()
+    {
+        Coin.instance.CoinColor_G();
     }
 }
