@@ -81,7 +81,7 @@ public class Thief : MonoBehaviour
         Coin.instance.coin -= Coin.instance.coin / coin_m;
 
         CoinColor_R();
-        Invoke("CoinColor_W", 0.35f);
+        Invoke("CoinColor_W", 0.5f);
 
         T_o.Play();
         animator.SetTrigger("T_out_f");
