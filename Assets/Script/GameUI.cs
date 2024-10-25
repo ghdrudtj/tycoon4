@@ -9,9 +9,9 @@ public class GameUI : MonoBehaviour
 
     private void Update()
     {
-        if (SceneManager.GetActiveScene().name == "StartScene")
+        if (SceneManager.GetActiveScene().name == "Stage1Scene")
         {
-            GameStop = false;
+            GameStop = true;
         }
         Menu();
     }
