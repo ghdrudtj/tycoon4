@@ -9,37 +9,47 @@ public class GameUI : MonoBehaviour
 
     private void Update()
     {
-        if (SceneManager.GetActiveScene().name == "Stage1Scene")
-        {
-            GameStop = true;
-        }
         Menu();
     }
     public void lnit()
     {
         instance = this;
     }
-    private void Start()
+    public void Awake()
     {
-      
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+            DontDestroyOnLoad(MenuUI);
+        }
+        else if (instance != this)
+        {
+            Destroy(gameObject);
+            Destroy(MenuUI);
+        }
     }
     private void Menu()
     {
         if (Input.GetKeyDown(KeyCode.Escape)) 
         {
             MenuUI.SetActive(!MenuUI.activeSelf);
-            if (GameStop)
-            {
-                Time.timeScale = 1.0f;
-                GameStop = false;
-                Debug.Log("게임 다시실행");
-            }
-            else
-            {
-                Time.timeScale = 0;
-                GameStop = true;
-                Debug.Log("게임 일시정지");
-            }
+            GameStop = true;
+        }
+    }
+    public void Stop()
+    {
+        if (GameStop)
+        {
+            Time.timeScale = 1.0f;
+            GameStop = false;
+            Debug.Log("게임 다시실행");
+        }
+        else
+        {
+            Time.timeScale = 0;
+            GameStop = true;
+            Debug.Log("게임 일시정지");
         }
     }
 }
