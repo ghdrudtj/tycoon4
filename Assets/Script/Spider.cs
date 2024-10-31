@@ -21,7 +21,7 @@ public class Spider : MonoBehaviour
     public Animator animator;
     void Start()
     {
-        spawnInterval = Random.Range(30, 41);
+       // spawnInterval = Random.Range(30, 41);
         StartCoroutine(spiderSpawnRoutine());
         animator = spiderObj.GetComponent<Animator>();
     }
@@ -36,6 +36,7 @@ public class Spider : MonoBehaviour
                 S_s.Play();
                 Spawnspider();
                 animator.SetTrigger("S_act");
+                animator.SetBool("S_idle",true);
                 isspiderActive = true;
 
                 //거미가 활성화되는 동안 대기
@@ -69,7 +70,7 @@ public class Spider : MonoBehaviour
         Debug.Log("거미 방어 성공!");
         animator.SetTrigger("S_out_c");
         spiderclickObj.SetActive(false);
-        Invoke("S_out", 0.75f);
+        Invoke("S_out", 0.5f);
         Trophy.instance.DisturbanceNum += 1;
     }
     void Overspider()
@@ -78,13 +79,14 @@ public class Spider : MonoBehaviour
         Debug.Log("거미 방어 실패!");
         animator.SetTrigger("S_out_f");
         spiderclickObj.SetActive(false);
-        Invoke("S_out", 0.75f);
+        Invoke("S_out", 0.5f);
         DollMakerManager.instance.Doll0();
     }
     void spiderClick()
     {
         if (isspiderActive)
         {
+            animator.SetTrigger("S_click");
             spiderObj.GetComponent<SpriteRenderer>().color = Color.red;
             Invoke("spiderColor", 0.1f);
 
