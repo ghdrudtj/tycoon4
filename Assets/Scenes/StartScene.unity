@@ -1384,50 +1384,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 618711907}
   m_CullTransparentMesh: 1
---- !u!1 &690739395
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 690739396}
-  - component: {fileID: 690739397}
-  m_Layer: 0
-  m_Name: GameObject (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &690739396
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 690739395}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 176.4406, y: 14.659314, z: 1.0717511}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1994782790}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &690739397
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 690739395}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5d577b0027210341aeea4534d6dae1f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &719373342
 GameObject:
   m_ObjectHideFlags: 0
@@ -1591,8 +1547,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1994782785}
-        m_TargetAssemblyTypeName: Scene, Assembly-CSharp
+      - m_Target: {fileID: 1994782786}
+        m_TargetAssemblyTypeName: GameUI, Assembly-CSharp
         m_MethodName: E_Warning
         m_Mode: 1
         m_Arguments:
@@ -4802,7 +4758,6 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 690739396}
   - {fileID: 1792975073}
   - {fileID: 1228844238}
   m_Father: {fileID: 0}
@@ -5137,8 +5092,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1565931458}
-        m_TargetAssemblyTypeName: Scene, Assembly-CSharp
+      - m_Target: {fileID: 1994782786}
+        m_TargetAssemblyTypeName: GameUI, Assembly-CSharp
         m_MethodName: E_Warning
         m_Mode: 1
         m_Arguments:

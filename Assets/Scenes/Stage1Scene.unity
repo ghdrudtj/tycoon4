@@ -2804,7 +2804,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5d577b0027210341aeea4534d6dae1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ExitWarning: {fileID: 1601831552}
 --- !u!114 &456219424
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2819,6 +2818,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MenuUI: {fileID: 823818163}
   GameStop: 0
+  ExitWarning: {fileID: 1601831552}
 --- !u!1 &477589455
 GameObject:
   m_ObjectHideFlags: 0
@@ -11743,9 +11743,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 456219423}
-        m_TargetAssemblyTypeName: Scene, Assembly-CSharp
-        m_MethodName: exitWarning
+      - m_Target: {fileID: 456219424}
+        m_TargetAssemblyTypeName: GameUI, Assembly-CSharp
+        m_MethodName: E_Warning
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -11876,9 +11876,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 456219423}
-        m_TargetAssemblyTypeName: Scene, Assembly-CSharp
-        m_MethodName: exitWarning
+      - m_Target: {fileID: 456219424}
+        m_TargetAssemblyTypeName: GameUI, Assembly-CSharp
+        m_MethodName: E_Warning
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
