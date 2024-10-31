@@ -12,9 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/StartScene.unity
     guid: a2bb806ab17e54e4fb3e4798de346500
   - enabled: 1
-    path: Assets/Scenes/OverScene.unity
-    guid: 8635e0e0cff0d7641a081c40dfc0535c
-  - enabled: 1
     path: Assets/Scenes/Stage1Scene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
@@ -23,6 +20,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Stage3Scene.unity
     guid: 6c2c229cc6a10bb4793ff5390d697167
+  - enabled: 1
+    path: Assets/Scenes/OverScene.unity
+    guid: 8635e0e0cff0d7641a081c40dfc0535c
   - enabled: 1
     path: Assets/Scenes/EndingScene.unity
     guid: 7450e1c63c6cc934c941d84ae3dcdd41

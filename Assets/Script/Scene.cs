@@ -23,8 +23,5 @@ public class Scene : MonoBehaviour// 씬 이동 중 GameUI 쪽 관리
     {
         SceneManager.LoadScene("Stage1Scene");
     }
-    public void StartScene2()
-    {
-        SceneManager.LoadScene("StartScene");
-    }
+  
 }
