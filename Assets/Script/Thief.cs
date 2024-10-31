@@ -38,6 +38,7 @@ public class Thief : MonoBehaviour
                 T_s.Play();
                 SpawnThief(); 
                 animator.SetTrigger("T_act");
+                animator.SetBool("T_idle", true);
                 isThiefActive = true;
 
                 // 도둑이 활성화되는 동안 대기
@@ -72,7 +73,7 @@ public class Thief : MonoBehaviour
         Trophy.instance.DisturbanceNum += 1;
         animator.SetTrigger("T_out_c");
         thiefclickObj.SetActive(false);
-        Invoke("T_out", 0.95f);
+        Invoke("T_out", 0.5f);
     }
     void OverThief()
     {
@@ -86,12 +87,13 @@ public class Thief : MonoBehaviour
         T_o.Play();
         animator.SetTrigger("T_out_f");
         thiefclickObj.SetActive(false);
-        Invoke("T_out", 0.95f);
+        Invoke("T_out", 0.5f);
     }
     public void ThiefClick()
     {
         if (isThiefActive)
         {
+            animator.SetTrigger("T_click");
             thiefObj.GetComponent<SpriteRenderer>().color = Color.red;
             Invoke("thiefcolor", 0.1f);
 
