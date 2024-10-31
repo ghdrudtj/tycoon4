@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Trophy : MonoBehaviour
+public class Trophy : MonoBehaviour// 트로피 관리
 {
     public static Trophy instance;
     [SerializeField] private GameObject TrophyCanvas;

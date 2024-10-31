@@ -12,7 +12,6 @@ public class Score : MonoBehaviour
     {
         Coin_m = GetComponent<TextMeshPro>();
     }
-
     void Update()
     {
        
@@ -23,8 +22,6 @@ public class Score : MonoBehaviour
         Coin_m.text = QuestM.instance.coin_m.ToString();
         transform.position = pos;
     }
-    
-
     void Desctive()
     {
         Destroy(gameObject);

@@ -4,13 +4,12 @@ using UnityEngine.UI;
 
 public class FailNum : MonoBehaviour
 {
-    public Text FailNumtext;
+    public Text FailNumtext; // 현 스테이지에서 틀린 횟수 체크
     void Start()
     {
         FailNumtext = GetComponent<Text>();
     }
-
-    void Update()
+    void Update() 
     {
         if (SceneManager.GetActiveScene().name == "Stage1Scene")
         {

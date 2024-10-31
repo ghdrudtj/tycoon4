@@ -1,14 +1,14 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameUI : MonoBehaviour
+public class GameUI : MonoBehaviour//기본 게임 종료와 다시 시작
 {
     public static GameUI instance;  
     public GameObject MenuUI;
     public bool GameStop =false;
     [SerializeField] private GameObject ExitWarning;
 
-    public void E_Warning()
+    public void E_Warning()// 게임종료 경고
     {
         ExitWarning.SetActive(!ExitWarning.activeSelf);
     }
@@ -32,7 +32,7 @@ public class GameUI : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    private void Menu()
+    private void Menu()//ESC로 확인, 게임 실행 도중에는 멈추게
     {
         if (Input.GetKeyDown(KeyCode.Escape)) 
         {

@@ -1,28 +1,16 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class NextScene : MonoBehaviour
+public class NextScene : MonoBehaviour //로드 되지 않은 씬 이동들
 {
-    public void MakeStart()
-    {
-        SceneManager.LoadScene("MainScene");
-    }
-    public void GameStart()
+    public void StartScene2()
     {
         SceneManager.LoadScene("StartScene");
     }
-    public void Over()
-    {
-        SceneManager.LoadScene("OverScene");
-    }
-    void Start()
-    {
-        
-    }
+    
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
+
+

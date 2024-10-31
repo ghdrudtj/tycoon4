@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class QuestM : MonoBehaviour
+public class QuestM : MonoBehaviour // 주문서와 주문서 클리어 여부 확인
 {
     public static QuestM instance;
 
@@ -15,7 +15,7 @@ public class QuestM : MonoBehaviour
     public GameObject QBtn;
     public GameObject Cbtn;
 
-    public UnityEngine.UI.Image order;
+    public UnityEngine.UI.Image order; // 주문서들 이미지 표시
     public GameObject d0;
     public Sprite d1;
     public Sprite d2;
@@ -38,15 +38,15 @@ public class QuestM : MonoBehaviour
     public Sprite d19;
     public Sprite d20;
 
-    [SerializeField]private float maxTimer = 10;
+    [SerializeField]private float maxTimer = 10; // 타이머
     Coroutine timerCoroutine;
     private bool timer;
 
-    private List<int> Unlock1 = new List<int> { 1, 2, 3, 4, 5, 9, 13, 17 };
+    private List<int> Unlock1 = new List<int> { 1, 2, 3, 4, 5, 9, 13, 17 }; // 해금에 따라 나오는 주문서 범위
     private List<int> Unlock2 = new List<int> { 1, 2, 3, 4, 5, 9, 13, 17, 6, 10, 14, 18 };
     private List<int> Unlock3 = new List<int> { 1, 2, 3, 4, 5, 9, 13, 17, 6, 10, 14, 18, 7, 11, 15, 19 };
 
-    public int coin_m;
+    public int coin_m; 
     public int clearNum;
 
     [SerializeField] private AudioSource Q_s;
@@ -62,13 +62,13 @@ public class QuestM : MonoBehaviour
         Cbtn.SetActive(false);
         timer = false;
     }
-    public void Quest()
+    public void Quest() // 주문서 생성 해금 정도에 따라 나오는 범위가 다름
     {
         Q_s.Play();
         d0.SetActive(true);
         Cbtn.SetActive(true);
         
-        timerCoroutine = StartCoroutine(TimerCoroutine());
+        timerCoroutine = StartCoroutine(TimerCoroutine());// 주문서 생성과 동시에 타이어 실행
         
         if (Unlock.instance != null) // Check if Unlock.Instance is not null
         {
@@ -94,7 +94,7 @@ public class QuestM : MonoBehaviour
             }
         }
         Debug.Log("QNum = " + QNum);
-        switch (QNum)
+        switch (QNum)  // 나오는 수에 따라 해당 이미지 보임
         {
             case 1: order.sprite = d1; break;
             case 2: order.sprite = d2; break;
@@ -125,12 +125,12 @@ public class QuestM : MonoBehaviour
         }
         QBtn.SetActive(false);
     }
-    public void Clear()
+    public void Clear()// 클리어 여부 확인
     {
         C_s.Play();
         StopCoroutine(timerCoroutine);
 
-        if (QNum == Num)
+        if (QNum == Num)// 맞을 시(성공)
         {
             Debug.Log("클리어");
             DollMakerManager.instance.Doll0();
@@ -159,7 +159,7 @@ public class QuestM : MonoBehaviour
                 Debug.Log("주문서 성공 횟수 = " + GameManager.instance.OrderclearNum3);
             }
         }
-        else if (QNum != Num)
+        else if (QNum != Num)// 다를 시(실패)
         {
             F_s.Play();
             Debug.Log("no");
@@ -188,7 +188,7 @@ public class QuestM : MonoBehaviour
     {
         Num = DollMakerManager.instance.Num;
     }
-    IEnumerator TimerCoroutine()
+    IEnumerator TimerCoroutine() // 타이어 안에 Clear()를 하지 않을 시 무조건으로 실패 처리
     {
         float currentTimer = 0f;
         timer=true;

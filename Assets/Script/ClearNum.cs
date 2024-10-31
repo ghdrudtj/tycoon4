@@ -4,12 +4,11 @@ using UnityEngine.UI;
 
 public class ClearNum : MonoBehaviour
 {
-    public Text ClearNumtext;
+    public Text ClearNumtext;// 현 스테이지에서 목표 개수 체크
     void Start()
     {
         ClearNumtext = GetComponent<Text>();
     }
-
     void Update()
     {
         if (SceneManager.GetActiveScene().name == "Stage1Scene")

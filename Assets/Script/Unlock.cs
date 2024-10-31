@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Unlock : MonoBehaviour
+public class Unlock : MonoBehaviour// 해금 전체 스테이지에서 공유
 {
     public static Unlock instance;
     [SerializeField] private GameObject Unlooks;

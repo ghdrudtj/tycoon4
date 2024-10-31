@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class DollMakerManager : MonoBehaviour
+public class DollMakerManager : MonoBehaviour//ÀÎÇü 
 {
     public static DollMakerManager instance;
     public Animator anim;

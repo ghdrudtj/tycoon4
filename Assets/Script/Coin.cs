@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Coin : MonoBehaviour
+public class Coin : MonoBehaviour//ÄÚÀÎ
 {
     public static Coin instance;
     public Text cointext;

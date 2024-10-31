@@ -4243,7 +4243,7 @@ GameObject:
   - component: {fileID: 1792975075}
   - component: {fileID: 1792975074}
   m_Layer: 0
-  m_Name: Panel
+  m_Name: M_Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

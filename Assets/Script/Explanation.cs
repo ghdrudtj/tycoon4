@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Explanation : MonoBehaviour
+public class Explanation : MonoBehaviour// 게임 설명
 {
     public static Explanation Instance;
     [SerializeField] public GameObject explanation;

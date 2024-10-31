@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameManager : MonoBehaviour
+public class GameManager : MonoBehaviour // 틀린 횟수와 목표 개수를 확인하여 클리어, 오버 여부 확인
 {
     public static GameManager instance; 
     [SerializeField] private Coin coin;

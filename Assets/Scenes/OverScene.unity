@@ -696,7 +696,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 789654440}
         m_TargetAssemblyTypeName: NextScene, Assembly-CSharp
-        m_MethodName: GameStart
+        m_MethodName: StartScene2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
