@@ -6,7 +6,12 @@ public class GameUI : MonoBehaviour
     public static GameUI instance;  
     public GameObject MenuUI;
     public bool GameStop =false;
+    [SerializeField] private GameObject ExitWarning;
 
+    public void E_Warning()
+    {
+        ExitWarning.SetActive(!ExitWarning.activeSelf);
+    }
     private void Update()
     {
         Menu();
@@ -21,12 +26,10 @@ public class GameUI : MonoBehaviour
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
-            DontDestroyOnLoad(MenuUI);
         }
         else if (instance != this)
         {
             Destroy(gameObject);
-            Destroy(MenuUI);
         }
     }
     private void Menu()
