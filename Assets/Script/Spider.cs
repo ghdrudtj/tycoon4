@@ -21,7 +21,7 @@ public class Spider : MonoBehaviour
     public Animator animator;
     void Start()
     {
-       // spawnInterval = Random.Range(30, 41);
+        spawnInterval = Random.Range(30, 41);
         StartCoroutine(spiderSpawnRoutine());
         animator = spiderObj.GetComponent<Animator>();
     }

@@ -16,12 +16,12 @@ public class LightOut : MonoBehaviour
     [SerializeField] private AudioSource L_o;
     [SerializeField] private AudioSource L_w;
 
-    [SerializeField] private Animation L_Anim;
+    [SerializeField] private Animator animator;
     void Start()
     {
-        spawnInterval = Random.Range(60, 71);
+        //spawnInterval = Random.Range(60, 71);
         StartCoroutine(LigherOutSpawnRoutine());
-        L_Anim = L_Warning.GetComponent<Animation>();
+        animator = L_Warning.GetComponent<Animator>();
     }
     IEnumerator LigherOutSpawnRoutine()
     {
@@ -31,7 +31,7 @@ public class LightOut : MonoBehaviour
             if (!isLightOutActive || GameUI.instance.GameStop)
             {
                 LightOutWarning();
-                Invoke("SpawnLightOut", 2.0f);
+                Invoke("SpawnLightOut", 0.95f);
                 isLightOutActive = true;
                 Debug.Log("소등 진행 시간 = " + LightOutActiveDuration);
                 // 소등이 활성화되는 동안 대기
@@ -63,6 +63,6 @@ public class LightOut : MonoBehaviour
         L_w.Play();
         L_Warning.SetActive(true);
         Debug.Log("소등경고");
-        L_Anim.Play();
+        animator.SetTrigger("L_out");
     }
 }

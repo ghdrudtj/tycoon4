@@ -1589,6 +1589,27 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8310509472751028047, guid: f36c2d77dec2bb94a84de56d9eb92ea5, type: 3}
   m_PrefabInstance: {fileID: 7438046368356451179}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &192968439
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 192968437}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ec21b476c81b9ac42aa287bd03e5455e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &224555155
 GameObject:
   m_ObjectHideFlags: 0
@@ -11593,7 +11614,7 @@ MonoBehaviour:
   spiderObj: {fileID: 1003795202}
   spiderclickObj: {fileID: 2084875754}
   spiderMaxNum: 20
-  spawnInterval: 30
+  spawnInterval: 2
   spiderActiveDuration: 5
   S_s: {fileID: 1026007420}
   S_o: {fileID: 1783750115}
@@ -11619,7 +11640,7 @@ MonoBehaviour:
   L_s: {fileID: 2031853173}
   L_o: {fileID: 1701469875}
   L_w: {fileID: 1588961162}
-  L_Anim: {fileID: 0}
+  animator: {fileID: 0}
 --- !u!114 &1637640913
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15008,9 +15029,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2284127105806003480, guid: f36c2d77dec2bb94a84de56d9eb92ea5, type: 3}
+    - {fileID: 4781633393133110087, guid: f36c2d77dec2bb94a84de56d9eb92ea5, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4023580058726508294, guid: f36c2d77dec2bb94a84de56d9eb92ea5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 192968439}
   m_SourcePrefab: {fileID: 100100000, guid: f36c2d77dec2bb94a84de56d9eb92ea5, type: 3}
 --- !u!1001 &7665033214835289033
 PrefabInstance:
