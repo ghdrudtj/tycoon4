@@ -19,11 +19,11 @@ public class Trophy : MonoBehaviour// 트로피 관리
     [SerializeField] private GameObject Trophy_D_T;
     [SerializeField] private GameObject Trophy_C_T;
 
-    private float TrophyCount_E = 1.5f;
-    private float TrophyCount_P = 1.5f;
-    private float TrophyCount_S1 = 1.5f;
-    private float TrophyCount_D = 1.5f;
-    private float TrophyCount_C = 1.5f;
+    private float TrophyCount_E = 1.25f;
+    private float TrophyCount_P = 1.25f;
+    private float TrophyCount_S1 = 1.25f;
+    private float TrophyCount_D = 1.25f;
+    private float TrophyCount_C = 1.25f;
 
     public int DisturbanceNum;
 
