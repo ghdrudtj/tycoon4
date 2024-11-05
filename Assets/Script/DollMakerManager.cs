@@ -36,6 +36,8 @@ public class DollMakerManager : MonoBehaviour//인형
         M_Doll1_1.SetActive(false);
         M_Doll1_4.SetActive(false);
         Coin.instance.coin -= 1;
+        Coincolor_Gr();
+        Invoke("CoinColor_W", 0.25f);
     }
     void head2()
     {
@@ -48,6 +50,8 @@ public class DollMakerManager : MonoBehaviour//인형
         M_Doll1_1.SetActive(false);
         M_Doll1_4.SetActive(false);
             Coin.instance.coin -= 1;
+        Coincolor_Gr();
+        Invoke("CoinColor_W", 0.25f);
     }
     void head1()
     {
@@ -60,6 +64,8 @@ public class DollMakerManager : MonoBehaviour//인형
         M_Doll1_3.SetActive(false);
         M_Doll1_4.SetActive(false);
         Coin.instance.coin -= 1;
+        Coincolor_Gr();
+        Invoke("CoinColor_W", 0.25f);
     }
     void head4()
     {
@@ -72,6 +78,8 @@ public class DollMakerManager : MonoBehaviour//인형
         M_Doll1_3.SetActive(false);
         M_Doll1_4.SetActive(true);
         Coin.instance.coin -= 1;
+        Coincolor_Gr();
+        Invoke("CoinColor_W", 0.25f);
     }
     public void Doll1_1()
     {
@@ -83,6 +91,8 @@ public class DollMakerManager : MonoBehaviour//인형
             Num = 5;
             Debug.Log("Num = " + Num);
             Coin.instance.coin -= 1;
+            Coincolor_Gr();
+            Invoke("CoinColor_W", 0.25f);
         }
     }
     public void Doll1_2()
@@ -94,6 +104,8 @@ public class DollMakerManager : MonoBehaviour//인형
             Num = 6;
             Debug.Log("Num = " + Num);
             Coin.instance.coin -= 1;
+            Coincolor_Gr();
+            Invoke("CoinColor_W", 0.25f);
         }
     }
     public void Doll1_3()
@@ -105,6 +117,8 @@ public class DollMakerManager : MonoBehaviour//인형
             Num = 7;
             Debug.Log("Num = " + Num);
             Coin.instance.coin -= 1;
+            Coincolor_Gr();
+            Invoke("CoinColor_W", 0.25f);
         }
     }
     public void Doll1_4()
@@ -116,6 +130,8 @@ public class DollMakerManager : MonoBehaviour//인형
             Num = 8;
             Debug.Log("Num = " + Num);
                 Coin.instance.coin -= 1;
+            Coincolor_Gr();
+            Invoke("CoinColor_W", 0.25f);
         }
     }
     public void Doll2_1()
@@ -127,6 +143,8 @@ public class DollMakerManager : MonoBehaviour//인형
             Num = 9;
             Debug.Log("Num = " + Num);
             Coin.instance.coin -= 1;
+            Coincolor_Gr();
+            Invoke("CoinColor_W", 0.25f);
         }
     }
     public void Doll2_2()
@@ -138,6 +156,8 @@ public class DollMakerManager : MonoBehaviour//인형
             Num = 10;
             Debug.Log("Num = " + Num);
             Coin.instance.coin -= 1;
+            Coincolor_Gr();
+            Invoke("CoinColor_W", 0.25f);
         }
     }
     public void Doll2_3()
@@ -149,6 +169,8 @@ public class DollMakerManager : MonoBehaviour//인형
             Num = 11;
             Debug.Log("Num = " + Num);
             Coin.instance.coin -= 1;
+            Coincolor_Gr();
+            Invoke("CoinColor_W", 0.25f);
         }
     }
     public void Doll2_4()
@@ -160,6 +182,8 @@ public class DollMakerManager : MonoBehaviour//인형
             Num = 12;
             Debug.Log("Num = " + Num);
             Coin.instance.coin -= 1;
+            Coincolor_Gr();
+            Invoke("CoinColor_W", 0.25f);
         }
     }
     public void Doll3_1()
@@ -171,6 +195,8 @@ public class DollMakerManager : MonoBehaviour//인형
             Num = 13;
             Debug.Log("Num = " + Num);
             Coin.instance.coin -= 1;
+            Coincolor_Gr();
+            Invoke("CoinColor_W", 0.25f);
         }
     }
     public void Doll3_2()
@@ -182,6 +208,8 @@ public class DollMakerManager : MonoBehaviour//인형
             Num = 14;
             Debug.Log("Num = " + Num);
             Coin.instance.coin -= 1;
+            Coincolor_Gr();
+            Invoke("CoinColor_W", 0.25f);
         }
     }
     public void Doll3_3()
@@ -193,6 +221,8 @@ public class DollMakerManager : MonoBehaviour//인형
             Num = 15;
             Debug.Log("Num = " + Num);
             Coin.instance.coin -= 1;
+            Coincolor_Gr();
+            Invoke("CoinColor_W", 0.25f);
         }
     }
     public void Doll3_4()
@@ -204,6 +234,8 @@ public class DollMakerManager : MonoBehaviour//인형
             Num = 16;
             Debug.Log("Num = " + Num);
             Coin.instance.coin -= 1;
+            Coincolor_Gr();
+            Invoke("CoinColor_W", 0.25f);
         }
     }
     public void Doll4_1()
@@ -215,6 +247,8 @@ public class DollMakerManager : MonoBehaviour//인형
             Num = 17;
             Debug.Log("Num = " + Num);
             Coin.instance.coin -= 1;
+            Coincolor_Gr();
+            Invoke("CoinColor_W", 0.25f);
         }
     }
     public void Doll4_2()
@@ -226,6 +260,8 @@ public class DollMakerManager : MonoBehaviour//인형
             Num = 18;
             Debug.Log("Num = " + Num);
             Coin.instance.coin -= 1;
+            Coincolor_Gr();
+            Invoke("CoinColor_W", 0.25f);
         }
     }
     public void Doll4_3()
@@ -237,6 +273,8 @@ public class DollMakerManager : MonoBehaviour//인형
             Num = 19;
             Debug.Log("Num = " + Num);
             Coin.instance.coin -= 1;
+            Coincolor_Gr();
+            Invoke("CoinColor_W", 0.25f);
         }
     }
     public void Doll4_4()
@@ -248,6 +286,8 @@ public class DollMakerManager : MonoBehaviour//인형
             Num = 20;
             Debug.Log("Num = " + Num);
             Coin.instance.coin -= 1;
+            Coincolor_Gr();
+            Invoke("CoinColor_W", 0.25f);
         }
     }
     public void Doll0()
@@ -260,7 +300,14 @@ public class DollMakerManager : MonoBehaviour//인형
             Debug.Log("Num = " + Num);
         }
     }
-
+    public void Coincolor_Gr()
+    {
+        Coin.instance.CoinColor_Gr();
+    }
+    void CoinColor_W()
+    {
+        Coin.instance.CoinColor_W();
+    }
     private void Update()
     {
         QNum = QuestM.instance.QNum;

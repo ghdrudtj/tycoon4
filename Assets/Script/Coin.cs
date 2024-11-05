@@ -32,4 +32,8 @@ public class Coin : MonoBehaviour//ÄÚÀÎ
     {
         cointext.GetComponent<Text>().color = Color.green;
     }
+    public void CoinColor_Gr()
+    {
+        cointext.GetComponent <Text>().color = Color.gray;
+    }
 }

@@ -108,7 +108,6 @@ public class Thief : MonoBehaviour
             }
         }
     }
-
     void thiefcolor()
     {
         thiefObj.GetComponent<SpriteRenderer>().color = Color.white;

@@ -43,6 +43,8 @@ public class Unlock : MonoBehaviour// 해금 전체 스테이지에서 공유
             U_s.Play();
             Unlock_1 = true;
             Coin.instance.coin -= 200;
+            CoinColor_R();
+            Invoke("CoinColor_W", 0.5f);
             Unlock1obj.SetActive(false);
             Debug.Log("첫번째 해금");
         }
@@ -58,6 +60,8 @@ public class Unlock : MonoBehaviour// 해금 전체 스테이지에서 공유
             U_s.Play();
             Unlock_2 = true;
             Coin.instance.coin -= 200;
+            CoinColor_R();
+            Invoke("CoinColor_W", 0.5f);
             Unlock2obj.SetActive(false);
             Debug.Log("두번째 해금");
         }
@@ -73,6 +77,8 @@ public class Unlock : MonoBehaviour// 해금 전체 스테이지에서 공유
             U_s.Play();
             Unlock_3 = true;
             Coin.instance.coin -= 200;
+            CoinColor_R();
+            Invoke("CoinColor_W", 0.5f);
             Unlock3obj.SetActive(false);
             Debug.Log("세번째 해금");
         }
@@ -88,6 +94,8 @@ public class Unlock : MonoBehaviour// 해금 전체 스테이지에서 공유
             U_s.Play();
             Unlock_4 = true;
             Coin.instance.coin -= 200;
+            CoinColor_R();
+            Invoke("CoinColor_W", 0.5f);
             Unlock4obj.SetActive(false);
             Debug.Log("네번째 해금");
         }
@@ -108,5 +116,12 @@ public class Unlock : MonoBehaviour// 해금 전체 스테이지에서 공유
         }
         
     }
-    
+    void CoinColor_W()
+    {
+        Coin.instance.CoinColor_W();
+    }
+    void CoinColor_R()
+    {
+        Coin.instance.CoinColor_R();
+    }
 }
