@@ -4,6 +4,7 @@ public class DollMakerManager : MonoBehaviour//인형
 {
     public static DollMakerManager instance;
     public Animator anim;
+    public GameObject Doll;
     public int Num;
     public int QNum;
 
@@ -300,6 +301,7 @@ public class DollMakerManager : MonoBehaviour//인형
             Debug.Log("Num = " + Num);
         }
     }
+    
     public void Coincolor_Gr()
     {
         Coin.instance.CoinColor_Gr();

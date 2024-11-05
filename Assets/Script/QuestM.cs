@@ -49,6 +49,9 @@ public class QuestM : MonoBehaviour // 주문서와 주문서 클리어 여부 확인
     public int coin_m; 
     public int clearNum;
 
+    [SerializeField] private GameObject ClearT;
+    [SerializeField] private GameObject FailT;
+
     [SerializeField] private AudioSource Q_s;
     [SerializeField] private AudioSource C_s;
     [SerializeField] private AudioSource F_s;
@@ -141,8 +144,10 @@ public class QuestM : MonoBehaviour // 주문서와 주문서 클리어 여부 확인
                 Coin.instance.coin += 10;
             }
             Coin.instance.coin += 30;
+            ClearT.SetActive(true);
+            Invoke("CoinColor_W", 0.45f);
             CoinColor_G();
-            Invoke("CoinColor_W", 0.35f);
+            Invoke("Clear_F", 0.35f);
             if (SceneManager.GetActiveScene().name == "Stage1Scene")
             {
                 GameManager.instance.OrderclearNum1++;
@@ -167,6 +172,8 @@ public class QuestM : MonoBehaviour // 주문서와 주문서 클리어 여부 확인
             d0.SetActive(false);
             Cbtn.SetActive(false);
             Coin.instance.coin -= coin_m;
+            FailT.SetActive(true);
+            Invoke("Fail_F", 0.45f);
             CoinColor_R();
             Invoke("CoinColor_W", 0.35f);
             if (SceneManager.GetActiveScene().name == "Stage1Scene")
@@ -205,6 +212,8 @@ public class QuestM : MonoBehaviour // 주문서와 주문서 클리어 여부 확인
         Cbtn.SetActive(false);
         QBtn.SetActive(true);
         timer = false;
+        FailT.SetActive(true);
+        Invoke("Fail_F", 0.45f);
         CoinColor_R();
         Invoke("CoinColor_W", 0.35f);
         if (SceneManager.GetActiveScene().name == "Stage1Scene")
@@ -234,5 +243,13 @@ public class QuestM : MonoBehaviour // 주문서와 주문서 클리어 여부 확인
     void CoinColor_G()
     {
         Coin.instance.CoinColor_G();
+    }
+    void Fail_F()
+    {
+        FailT.SetActive(false);
+    }
+    void Clear_F()
+    {
+        ClearT.SetActive(false);
     }
 }
