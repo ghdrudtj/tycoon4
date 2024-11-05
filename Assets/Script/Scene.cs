@@ -8,6 +8,7 @@ public class Scene : MonoBehaviour// 씬 이동 중 GameUI 쪽 관리
 
     public void Exit()
     {
+        Debug.Log("게임종료");
         Application.Quit();
     }
     public void StartScene()

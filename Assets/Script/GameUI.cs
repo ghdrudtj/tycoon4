@@ -32,13 +32,17 @@ public class GameUI : MonoBehaviour//기본 게임 종료와 다시 시작
             Destroy(gameObject);
         }
     }
-    private void Menu()//ESC로 확인, 게임 실행 도중에는 멈추게
+    public void Menu()//ESC로 확인, 게임 실행 도중에는 멈추게
     {
         if (Input.GetKeyDown(KeyCode.Escape)) 
         {
             MenuUI.SetActive(!MenuUI.activeSelf);
             GameStop = true;
         }
+    }
+    public void Menu_F()
+    {
+        MenuUI.SetActive(!MenuUI.activeSelf);
     }
     public void Stop()
     {
